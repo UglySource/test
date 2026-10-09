@@ -1,0 +1,2336 @@
+local RunService = game:GetService("RunService")
+local TweenService = game:GetService("TweenService")
+local TextService = game:GetService("TextService")
+local UserInputService = game:GetService("UserInputService")
+local Players = game:GetService("Players")
+local GuiService = game:GetService("GuiService")
+Players.LocalPlayer:GetMouse()
+local hui = gethui()
+getgenv().shitaro_drawmask = {}
+
+local connection_input_began_1 = UserInputService.InputBegan:Connect(
+    function(input, gameProcessed) end
+)
+
+local screenGui_001 = Instance.new("ScreenGui")
+screenGui_001.Name = "screenGui_001"
+screenGui_001.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+screenGui_001.ResetOnSpawn = false
+screenGui_001.IgnoreGuiInset = true
+screenGui_001.DisplayOrder = 1000
+protect_gui(screenGui_001)
+screenGui_001.Parent = hui
+
+local connection_descendant_added_1 = screenGui_001.DescendantAdded:Connect(
+    function(descendant7) end
+)
+
+task.spawn(
+    function()
+        task.wait(1.25)
+        task.wait(1.25)
+    end
+)
+
+local sound_001 = Instance.new("Sound")
+sound_001.SoundId = "rbxasset://sounds/electronicpingshort.wav"
+sound_001.Name = "sound_001"
+sound_001.Volume = 0.34
+sound_001.Parent = screenGui_001
+local sound_002 = Instance.new("Sound")
+sound_002.SoundId = "rbxasset://sounds/electronicpingshort.wav"
+sound_002.Name = "sound_002"
+sound_002.Volume = 0.34
+sound_002.Parent = screenGui_001
+local sound_003 = Instance.new("Sound")
+sound_003.SoundId = "rbxasset://sounds/electronicpingshort.wav"
+sound_003.Name = "sound_003"
+sound_003.Volume = 0.34
+sound_003.Parent = screenGui_001
+local sound_004 = Instance.new("Sound")
+sound_004.SoundId = "rbxasset://sounds/electronicpingshort.wav"
+sound_004.Name = "sound_004"
+sound_004.Volume = 0.34
+sound_004.Parent = screenGui_001
+local imageLabel_001 = Instance.new("ImageLabel")
+imageLabel_001.Visible = false
+imageLabel_001.ScaleType = Enum.ScaleType.Stretch
+imageLabel_001.AnchorPoint = Vector2.new(0.5, 0.5)
+imageLabel_001.Image = ""
+imageLabel_001.Name = "imageLabel_001"
+imageLabel_001.BackgroundTransparency = 1
+imageLabel_001.ZIndex = 2147483647
+imageLabel_001.BorderSizePixel = 0
+imageLabel_001.Size = UDim2.fromOffset(64, 64)
+imageLabel_001.Parent = screenGui_001
+imageLabel_001.ResampleMode = Enum.ResamplerMode.Pixelated
+Instance.new("UIShadow")
+local canvasGroup_001 = Instance.new("CanvasGroup")
+canvasGroup_001.AnchorPoint = Vector2.new(0, 0.5)
+canvasGroup_001.BackgroundTransparency = 1
+canvasGroup_001.Name = "canvasGroup_001"
+canvasGroup_001.Position = UDim2.new(0, 8, 0.5, 0)
+canvasGroup_001.BorderSizePixel = 0
+canvasGroup_001.ZIndex = 900
+canvasGroup_001.AutomaticSize = Enum.AutomaticSize.XY
+canvasGroup_001.Size = UDim2.fromOffset(0, 0)
+canvasGroup_001.Parent = screenGui_001
+local UIListLayout = Instance.new("UIListLayout")
+UIListLayout.Padding = UDim.new(0, 3)
+UIListLayout.FillDirection = Enum.FillDirection.Vertical
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Left
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Parent = canvasGroup_001
+local UIPadding = Instance.new("UIPadding")
+UIPadding.PaddingBottom = UDim.new(0, 10)
+UIPadding.PaddingTop = UDim.new(0, 10)
+UIPadding.PaddingLeft = UDim.new(0, 10)
+UIPadding.PaddingRight = UDim.new(0, 10)
+UIPadding.Parent = canvasGroup_001
+canvasGroup_001.Visible = false
+canvasGroup_001.GroupTransparency = 1
+local frame_001 = Instance.new("Frame")
+frame_001.LayoutOrder = 0
+frame_001.BackgroundTransparency = 0.16
+frame_001.Name = "frame_001"
+frame_001.ClipsDescendants = true
+frame_001.BackgroundColor3 = Color3.fromRGB(11, 11, 14)
+frame_001.ZIndex = 2
+frame_001.BorderSizePixel = 0
+frame_001.Size = UDim2.fromOffset(0, 0)
+frame_001.Parent = canvasGroup_001
+local UICorner = Instance.new("UICorner")
+UICorner.CornerRadius = UDim.new(0, 8)
+UICorner.Parent = frame_001
+local UIStroke = Instance.new("UIStroke")
+UIStroke.Thickness = 1
+UIStroke.Transparency = 0.45
+UIStroke.Color = Color3.fromRGB(52, 52, 64)
+UIStroke.LineJoinMode = Enum.LineJoinMode.Round
+UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke.Parent = frame_001
+local UIShadow = Instance.new("UIShadow")
+UIShadow.Offset = UDim2.fromOffset(0, 2)
+UIShadow.Transparency = 0.6
+UIShadow.BlurRadius = UDim.new(0, 10)
+UIShadow.Color = Color3.fromRGB(6, 6, 8)
+UIShadow.ZIndex = -1
+UIShadow.Spread = UDim2.fromOffset(-2, -2)
+UIShadow.Parent = frame_001
+local frame_002 = Instance.new("Frame")
+frame_002.Name = "frame_002"
+frame_002.BackgroundTransparency = 0.82
+frame_002.BackgroundColor3 = Color3.fromRGB(150, 152, 175)
+frame_002.ZIndex = 2
+frame_002.BorderSizePixel = 0
+frame_002.Size = UDim2.fromScale(1, 1)
+frame_002.Parent = frame_001
+local uICorner_001 = Instance.new("UICorner")
+uICorner_001.CornerRadius = UDim.new(0, 8)
+uICorner_001.Parent = frame_002
+local UIGradient = Instance.new("UIGradient")
+UIGradient.Rotation = 90
+UIGradient.Transparency = NumberSequence.new(
+    {
+        NumberSequenceKeypoint.new(0, 0.5), NumberSequenceKeypoint.new(0.6, 0.82),
+        NumberSequenceKeypoint.new(1, 0.9)
+    }
+)
+UIGradient.Parent = frame_002
+local frame_003 = Instance.new("Frame")
+frame_003.AnchorPoint = Vector2.new(0.5, 0)
+frame_003.BackgroundTransparency = 0.7
+frame_003.Name = "frame_003"
+frame_003.Position = UDim2.new(0.5, 0, 0, 1)
+frame_003.BackgroundColor3 = Color3.fromRGB(150, 152, 175)
+frame_003.ZIndex = 3
+frame_003.BorderSizePixel = 0
+frame_003.Size = UDim2.new(1, -14, 0, 1)
+frame_003.Parent = frame_001
+local uIGradient_001 = Instance.new("UIGradient")
+uIGradient_001.Rotation = 0
+uIGradient_001.Transparency = NumberSequence.new(
+    {
+        NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(0.5, 0.1),
+        NumberSequenceKeypoint.new(1, 1)
+    }
+)
+uIGradient_001.Parent = frame_003
+local frame_004 = Instance.new("Frame")
+frame_004.Name = "frame_004"
+frame_004.BackgroundTransparency = 1
+frame_004.ZIndex = 3
+frame_004.BorderSizePixel = 0
+frame_004.Size = UDim2.fromScale(1, 1)
+frame_004.Parent = frame_001
+local uIPadding_001 = Instance.new("UIPadding")
+uIPadding_001.PaddingLeft = UDim.new(0, 14)
+uIPadding_001.PaddingRight = UDim.new(0, 14)
+uIPadding_001.Parent = frame_004
+local uIListLayout_001 = Instance.new("UIListLayout")
+uIListLayout_001.VerticalAlignment = Enum.VerticalAlignment.Center
+uIListLayout_001.FillDirection = Enum.FillDirection.Horizontal
+uIListLayout_001.HorizontalAlignment = Enum.HorizontalAlignment.Center
+uIListLayout_001.Padding = UDim.new(0, 8)
+uIListLayout_001.SortOrder = Enum.SortOrder.LayoutOrder
+uIListLayout_001.Parent = frame_004
+frame_001.Active = true
+local imageLabel_002 = Instance.new("ImageLabel")
+imageLabel_002.ImageColor3 = Color3.fromRGB(122, 122, 134)
+imageLabel_002.ScaleType = Enum.ScaleType.Fit
+imageLabel_002.ImageTransparency = 0
+imageLabel_002.Image = "rbxassetid://121978468376124"
+imageLabel_002.Name = "imageLabel_002"
+imageLabel_002.LayoutOrder = 1
+imageLabel_002.ZIndex = 4
+imageLabel_002.BackgroundTransparency = 1
+imageLabel_002.Size = UDim2.fromOffset(17, 17)
+imageLabel_002.Parent = frame_004
+local textLabel_001 = Instance.new("TextLabel")
+textLabel_001.LayoutOrder = 2
+textLabel_001.TextColor3 = Color3.fromRGB(240, 240, 245)
+textLabel_001.Text = "hotkeys"
+textLabel_001.Font = Enum.Font.GothamMedium
+textLabel_001.Name = "textLabel_001"
+textLabel_001.BackgroundTransparency = 1
+textLabel_001.TextSize = 14
+textLabel_001.ZIndex = 4
+textLabel_001.AutomaticSize = Enum.AutomaticSize.X
+textLabel_001.Size = UDim2.fromOffset(0, 20)
+textLabel_001.Parent = frame_004
+local textSize = TextService:GetTextSize(
+    "hotkeys", 14, Enum.Font.GothamBold, Vector2.new(9000000000, 9000000000)
+)
+
+local connection_input_began_2 = frame_001.InputBegan:Connect(function(input2, gameProcessed2) end)
+
+local connection_input_ended_1 = UserInputService.InputEnded:Connect(
+    function(input3, gameProcessed3) end
+)
+
+local connection_input_changed_1 = UserInputService.InputChanged:Connect(
+    function(input4, gameProcessed4) end
+)
+
+frame_001.Size = UDim2.fromOffset((53 + math.ceil(textSize.X)), 36)
+local canvasGroup_002 = Instance.new("CanvasGroup")
+canvasGroup_002.AnchorPoint = Vector2.new(1, 0)
+canvasGroup_002.BackgroundTransparency = 1
+canvasGroup_002.Name = "canvasGroup_002"
+canvasGroup_002.Position = UDim2.new(1, -8, 0, 8)
+canvasGroup_002.BorderSizePixel = 0
+canvasGroup_002.ZIndex = 900
+canvasGroup_002.AutomaticSize = Enum.AutomaticSize.XY
+canvasGroup_002.Size = UDim2.fromOffset(0, 0)
+canvasGroup_002.Parent = screenGui_001
+local uIListLayout_002 = Instance.new("UIListLayout")
+uIListLayout_002.VerticalAlignment = Enum.VerticalAlignment.Center
+uIListLayout_002.FillDirection = Enum.FillDirection.Horizontal
+uIListLayout_002.HorizontalAlignment = Enum.HorizontalAlignment.Right
+uIListLayout_002.Padding = UDim.new(0, 8)
+uIListLayout_002.SortOrder = Enum.SortOrder.LayoutOrder
+uIListLayout_002.Parent = canvasGroup_002
+local uIPadding_002 = Instance.new("UIPadding")
+uIPadding_002.PaddingBottom = UDim.new(0, 10)
+uIPadding_002.PaddingTop = UDim.new(0, 10)
+uIPadding_002.PaddingLeft = UDim.new(0, 10)
+uIPadding_002.PaddingRight = UDim.new(0, 10)
+uIPadding_002.Parent = canvasGroup_002
+canvasGroup_002.Visible = false
+canvasGroup_002.GroupTransparency = 1
+local frame_005 = Instance.new("Frame")
+frame_005.LayoutOrder = 1
+frame_005.Active = true
+frame_005.BackgroundColor3 = Color3.fromRGB(11, 11, 14)
+frame_005.Name = "frame_005"
+frame_005.BorderSizePixel = 0
+frame_005.BackgroundTransparency = 0.16
+frame_005.ZIndex = 2
+frame_005.AutomaticSize = Enum.AutomaticSize.X
+frame_005.Size = UDim2.fromOffset(0, 30)
+frame_005.Parent = canvasGroup_002
+local uICorner_002 = Instance.new("UICorner")
+uICorner_002.CornerRadius = UDim.new(0, 8)
+uICorner_002.Parent = frame_005
+local uIStroke_001 = Instance.new("UIStroke")
+uIStroke_001.Thickness = 1
+uIStroke_001.Transparency = 0.45
+uIStroke_001.Color = Color3.fromRGB(52, 52, 64)
+uIStroke_001.LineJoinMode = Enum.LineJoinMode.Round
+uIStroke_001.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+uIStroke_001.Parent = frame_005
+local uIShadow_001 = Instance.new("UIShadow")
+uIShadow_001.Offset = UDim2.fromOffset(0, 2)
+uIShadow_001.Transparency = 0.6
+uIShadow_001.BlurRadius = UDim.new(0, 10)
+uIShadow_001.Color = Color3.fromRGB(6, 6, 8)
+uIShadow_001.ZIndex = -1
+uIShadow_001.Spread = UDim2.fromOffset(-2, -2)
+uIShadow_001.Parent = frame_005
+local frame_006 = Instance.new("Frame")
+frame_006.Name = "frame_006"
+frame_006.BackgroundTransparency = 0.82
+frame_006.BackgroundColor3 = Color3.fromRGB(150, 152, 175)
+frame_006.ZIndex = 2
+frame_006.BorderSizePixel = 0
+frame_006.Size = UDim2.fromScale(1, 1)
+frame_006.Parent = frame_005
+local uICorner_003 = Instance.new("UICorner")
+uICorner_003.CornerRadius = UDim.new(0, 8)
+uICorner_003.Parent = frame_006
+local uIGradient_002 = Instance.new("UIGradient")
+uIGradient_002.Rotation = 90
+uIGradient_002.Transparency = NumberSequence.new(
+    {
+        NumberSequenceKeypoint.new(0, 0.5), NumberSequenceKeypoint.new(0.6, 0.82),
+        NumberSequenceKeypoint.new(1, 0.9)
+    }
+)
+uIGradient_002.Parent = frame_006
+local frame_007 = Instance.new("Frame")
+frame_007.AnchorPoint = Vector2.new(0.5, 0)
+frame_007.BackgroundTransparency = 0.7
+frame_007.Name = "frame_007"
+frame_007.Position = UDim2.new(0.5, 0, 0, 1)
+frame_007.BackgroundColor3 = Color3.fromRGB(150, 152, 175)
+frame_007.ZIndex = 3
+frame_007.BorderSizePixel = 0
+frame_007.Size = UDim2.new(1, -14, 0, 1)
+frame_007.Parent = frame_005
+local uIGradient_003 = Instance.new("UIGradient")
+uIGradient_003.Rotation = 0
+uIGradient_003.Transparency = NumberSequence.new(
+    {
+        NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(0.5, 0.1),
+        NumberSequenceKeypoint.new(1, 1)
+    }
+)
+uIGradient_003.Parent = frame_007
+local frame_008 = Instance.new("Frame")
+frame_008.Name = "frame_008"
+frame_008.BackgroundTransparency = 1
+frame_008.BorderSizePixel = 0
+frame_008.ZIndex = 3
+frame_008.AutomaticSize = Enum.AutomaticSize.X
+frame_008.Size = UDim2.fromOffset(0, 30)
+frame_008.Parent = frame_005
+local uIPadding_003 = Instance.new("UIPadding")
+uIPadding_003.PaddingLeft = UDim.new(0, 13)
+uIPadding_003.PaddingRight = UDim.new(0, 13)
+uIPadding_003.Parent = frame_008
+local uIListLayout_003 = Instance.new("UIListLayout")
+uIListLayout_003.VerticalAlignment = Enum.VerticalAlignment.Center
+uIListLayout_003.FillDirection = Enum.FillDirection.Horizontal
+uIListLayout_003.Padding = UDim.new(0, 8)
+uIListLayout_003.SortOrder = Enum.SortOrder.LayoutOrder
+uIListLayout_003.Parent = frame_008
+
+local connection_input_began_3 = frame_005.InputBegan:Connect(function(input5, gameProcessed5) end)
+
+local connection_input_ended_2 = UserInputService.InputEnded:Connect(
+    function(input6, gameProcessed6) end
+)
+
+local connection_input_changed_2 = UserInputService.InputChanged:Connect(
+    function(input7, gameProcessed7) end
+)
+
+local imageLabel_003 = Instance.new("ImageLabel")
+imageLabel_003.ImageColor3 = Color3.fromRGB(122, 122, 134)
+imageLabel_003.ScaleType = Enum.ScaleType.Fit
+imageLabel_003.ImageTransparency = 0
+imageLabel_003.Image = "rbxassetid://75851496262862"
+imageLabel_003.Name = "imageLabel_003"
+imageLabel_003.LayoutOrder = 1
+imageLabel_003.ZIndex = 4
+imageLabel_003.BackgroundTransparency = 1
+imageLabel_003.Size = UDim2.fromOffset(16, 16)
+imageLabel_003.Parent = frame_008
+local textLabel_002 = Instance.new("TextLabel")
+textLabel_002.LayoutOrder = 2
+textLabel_002.TextColor3 = Color3.fromRGB(240, 240, 245)
+textLabel_002.TextTransparency = 0.05
+textLabel_002.Text = "shitaro.lol"
+textLabel_002.Font = Enum.Font.GothamMedium
+textLabel_002.Name = "textLabel_002"
+textLabel_002.BackgroundTransparency = 1
+textLabel_002.TextSize = 14
+textLabel_002.ZIndex = 4
+textLabel_002.AutomaticSize = Enum.AutomaticSize.X
+textLabel_002.Size = UDim2.fromOffset(0, 20)
+textLabel_002.Parent = frame_008
+local frame_009 = Instance.new("Frame")
+frame_009.LayoutOrder = 2
+frame_009.Active = true
+frame_009.BackgroundColor3 = Color3.fromRGB(11, 11, 14)
+frame_009.Name = "frame_009"
+frame_009.BorderSizePixel = 0
+frame_009.BackgroundTransparency = 0.16
+frame_009.ZIndex = 2
+frame_009.AutomaticSize = Enum.AutomaticSize.X
+frame_009.Size = UDim2.fromOffset(0, 30)
+frame_009.Parent = canvasGroup_002
+local uICorner_004 = Instance.new("UICorner")
+uICorner_004.CornerRadius = UDim.new(0, 8)
+uICorner_004.Parent = frame_009
+local uIStroke_002 = Instance.new("UIStroke")
+uIStroke_002.Thickness = 1
+uIStroke_002.Transparency = 0.45
+uIStroke_002.Color = Color3.fromRGB(52, 52, 64)
+uIStroke_002.LineJoinMode = Enum.LineJoinMode.Round
+uIStroke_002.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+uIStroke_002.Parent = frame_009
+local uIShadow_002 = Instance.new("UIShadow")
+uIShadow_002.Offset = UDim2.fromOffset(0, 2)
+uIShadow_002.Transparency = 0.6
+uIShadow_002.BlurRadius = UDim.new(0, 10)
+uIShadow_002.Color = Color3.fromRGB(6, 6, 8)
+uIShadow_002.ZIndex = -1
+uIShadow_002.Spread = UDim2.fromOffset(-2, -2)
+uIShadow_002.Parent = frame_009
+local frame_010 = Instance.new("Frame")
+frame_010.Name = "frame_010"
+frame_010.BackgroundTransparency = 0.82
+frame_010.BackgroundColor3 = Color3.fromRGB(150, 152, 175)
+frame_010.ZIndex = 2
+frame_010.BorderSizePixel = 0
+frame_010.Size = UDim2.fromScale(1, 1)
+frame_010.Parent = frame_009
+local uICorner_005 = Instance.new("UICorner")
+uICorner_005.CornerRadius = UDim.new(0, 8)
+uICorner_005.Parent = frame_010
+local uIGradient_004 = Instance.new("UIGradient")
+uIGradient_004.Rotation = 90
+uIGradient_004.Transparency = NumberSequence.new(
+    {
+        NumberSequenceKeypoint.new(0, 0.5), NumberSequenceKeypoint.new(0.6, 0.82),
+        NumberSequenceKeypoint.new(1, 0.9)
+    }
+)
+uIGradient_004.Parent = frame_010
+local frame_011 = Instance.new("Frame")
+frame_011.AnchorPoint = Vector2.new(0.5, 0)
+frame_011.BackgroundTransparency = 0.7
+frame_011.Name = "frame_011"
+frame_011.Position = UDim2.new(0.5, 0, 0, 1)
+frame_011.BackgroundColor3 = Color3.fromRGB(150, 152, 175)
+frame_011.ZIndex = 3
+frame_011.BorderSizePixel = 0
+frame_011.Size = UDim2.new(1, -14, 0, 1)
+frame_011.Parent = frame_009
+local uIGradient_005 = Instance.new("UIGradient")
+uIGradient_005.Rotation = 0
+uIGradient_005.Transparency = NumberSequence.new(
+    {
+        NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(0.5, 0.1),
+        NumberSequenceKeypoint.new(1, 1)
+    }
+)
+uIGradient_005.Parent = frame_011
+local frame_012 = Instance.new("Frame")
+frame_012.Name = "frame_012"
+frame_012.BackgroundTransparency = 1
+frame_012.BorderSizePixel = 0
+frame_012.ZIndex = 3
+frame_012.AutomaticSize = Enum.AutomaticSize.X
+frame_012.Size = UDim2.fromOffset(0, 30)
+frame_012.Parent = frame_009
+local uIPadding_004 = Instance.new("UIPadding")
+uIPadding_004.PaddingLeft = UDim.new(0, 13)
+uIPadding_004.PaddingRight = UDim.new(0, 13)
+uIPadding_004.Parent = frame_012
+local uIListLayout_004 = Instance.new("UIListLayout")
+uIListLayout_004.VerticalAlignment = Enum.VerticalAlignment.Center
+uIListLayout_004.FillDirection = Enum.FillDirection.Horizontal
+uIListLayout_004.Padding = UDim.new(0, 8)
+uIListLayout_004.SortOrder = Enum.SortOrder.LayoutOrder
+uIListLayout_004.Parent = frame_012
+
+local connection_input_began_4 = frame_009.InputBegan:Connect(function(input8, gameProcessed8) end)
+
+local connection_input_ended_3 = UserInputService.InputEnded:Connect(
+    function(input9, gameProcessed9) end
+)
+
+local connection_input_changed_3 = UserInputService.InputChanged:Connect(
+    function(input10, gameProcessed10) end
+)
+
+local imageLabel_004 = Instance.new("ImageLabel")
+imageLabel_004.LayoutOrder = 10
+imageLabel_004.ScaleType = Enum.ScaleType.Crop
+imageLabel_004.ImageTransparency = 0.02
+imageLabel_004.Image = "rbxthumb://type=AvatarHeadShot&id=0&w=150&h=150"
+imageLabel_004.Name = "imageLabel_004"
+imageLabel_004.BackgroundTransparency = 0.3
+imageLabel_004.BackgroundColor3 = Color3.fromRGB(6, 6, 8)
+imageLabel_004.ZIndex = 4
+imageLabel_004.BorderSizePixel = 0
+imageLabel_004.Size = UDim2.fromOffset(22, 22)
+imageLabel_004.Parent = frame_012
+local uICorner_006 = Instance.new("UICorner")
+uICorner_006.CornerRadius = UDim.new(1, 0)
+uICorner_006.Parent = imageLabel_004
+local uIStroke_003 = Instance.new("UIStroke")
+uIStroke_003.Color = Color3.fromRGB(52, 52, 64)
+uIStroke_003.Transparency = 0.35
+uIStroke_003.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+uIStroke_003.Thickness = 1
+uIStroke_003.Parent = imageLabel_004
+local textLabel_003 = Instance.new("TextLabel")
+textLabel_003.LayoutOrder = 22
+textLabel_003.TextColor3 = Color3.fromRGB(240, 240, 245)
+textLabel_003.TextTransparency = 0.05
+textLabel_003.Text = Players.LocalPlayer.Name
+textLabel_003.Font = Enum.Font.GothamMedium
+textLabel_003.Name = "textLabel_003"
+textLabel_003.BackgroundTransparency = 1
+textLabel_003.TextSize = 14
+textLabel_003.ZIndex = 4
+textLabel_003.AutomaticSize = Enum.AutomaticSize.X
+textLabel_003.Size = UDim2.fromOffset(0, 20)
+textLabel_003.Parent = frame_012
+local frame_013 = Instance.new("Frame")
+frame_013.LayoutOrder = 30
+frame_013.Name = "frame_013"
+frame_013.BackgroundTransparency = 1
+frame_013.ZIndex = 4
+frame_013.BorderSizePixel = 0
+frame_013.Size = UDim2.fromOffset(14, 16)
+frame_013.Parent = frame_012
+local frame_014 = Instance.new("Frame")
+frame_014.AnchorPoint = Vector2.new(0.5, 0.5)
+frame_014.BackgroundTransparency = 0.62
+frame_014.Name = "frame_014"
+frame_014.Position = UDim2.fromScale(0.5, 0.5)
+frame_014.BackgroundColor3 = Color3.fromRGB(150, 152, 175)
+frame_014.ZIndex = 4
+frame_014.BorderSizePixel = 0
+frame_014.Size = UDim2.fromOffset(1, 16)
+frame_014.Parent = frame_013
+local uIGradient_006 = Instance.new("UIGradient")
+uIGradient_006.Rotation = 90
+uIGradient_006.Transparency = NumberSequence.new(
+    {
+        NumberSequenceKeypoint.new(0, 0.85), NumberSequenceKeypoint.new(0.5, 0),
+        NumberSequenceKeypoint.new(1, 0.85)
+    }
+)
+uIGradient_006.Parent = frame_014
+local imageLabel_005 = Instance.new("ImageLabel")
+imageLabel_005.ImageColor3 = Color3.fromRGB(240, 240, 245)
+imageLabel_005.ScaleType = Enum.ScaleType.Fit
+imageLabel_005.ImageTransparency = 0.25
+imageLabel_005.Image = "rbxassetid://114499998778667"
+imageLabel_005.Name = "imageLabel_005"
+imageLabel_005.LayoutOrder = 31
+imageLabel_005.ZIndex = 4
+imageLabel_005.BackgroundTransparency = 1
+imageLabel_005.Size = UDim2.fromOffset(15, 15)
+imageLabel_005.Parent = frame_012
+local textLabel_004 = Instance.new("TextLabel")
+textLabel_004.LayoutOrder = 32
+textLabel_004.TextColor3 = Color3.fromRGB(240, 240, 245)
+textLabel_004.TextTransparency = 0.05
+textLabel_004.Text = "0"
+textLabel_004.Font = Enum.Font.GothamMedium
+textLabel_004.Name = "textLabel_004"
+textLabel_004.BackgroundTransparency = 1
+textLabel_004.TextSize = 14
+textLabel_004.ZIndex = 4
+textLabel_004.AutomaticSize = Enum.AutomaticSize.X
+textLabel_004.Size = UDim2.fromOffset(0, 20)
+textLabel_004.Parent = frame_012
+local frame_015 = Instance.new("Frame")
+frame_015.LayoutOrder = 40
+frame_015.Name = "frame_015"
+frame_015.BackgroundTransparency = 1
+frame_015.ZIndex = 4
+frame_015.BorderSizePixel = 0
+frame_015.Size = UDim2.fromOffset(14, 16)
+frame_015.Parent = frame_012
+local frame_016 = Instance.new("Frame")
+frame_016.AnchorPoint = Vector2.new(0.5, 0.5)
+frame_016.BackgroundTransparency = 0.62
+frame_016.Name = "frame_016"
+frame_016.Position = UDim2.fromScale(0.5, 0.5)
+frame_016.BackgroundColor3 = Color3.fromRGB(150, 152, 175)
+frame_016.ZIndex = 4
+frame_016.BorderSizePixel = 0
+frame_016.Size = UDim2.fromOffset(1, 16)
+frame_016.Parent = frame_015
+local uIGradient_007 = Instance.new("UIGradient")
+uIGradient_007.Rotation = 90
+uIGradient_007.Transparency = NumberSequence.new(
+    {
+        NumberSequenceKeypoint.new(0, 0.85), NumberSequenceKeypoint.new(0.5, 0),
+        NumberSequenceKeypoint.new(1, 0.85)
+    }
+)
+uIGradient_007.Parent = frame_016
+local imageLabel_006 = Instance.new("ImageLabel")
+imageLabel_006.ImageColor3 = Color3.fromRGB(240, 240, 245)
+imageLabel_006.ScaleType = Enum.ScaleType.Fit
+imageLabel_006.ImageTransparency = 0.25
+imageLabel_006.Image = "rbxassetid://104941258142372"
+imageLabel_006.Name = "imageLabel_006"
+imageLabel_006.LayoutOrder = 41
+imageLabel_006.ZIndex = 4
+imageLabel_006.BackgroundTransparency = 1
+imageLabel_006.Size = UDim2.fromOffset(15, 15)
+imageLabel_006.Parent = frame_012
+local textLabel_005 = Instance.new("TextLabel")
+textLabel_005.LayoutOrder = 42
+textLabel_005.TextColor3 = Color3.fromRGB(240, 240, 245)
+textLabel_005.TextTransparency = 0.05
+textLabel_005.Text = "0ms"
+textLabel_005.Font = Enum.Font.GothamMedium
+textLabel_005.Name = "textLabel_005"
+textLabel_005.BackgroundTransparency = 1
+textLabel_005.TextSize = 14
+textLabel_005.ZIndex = 4
+textLabel_005.AutomaticSize = Enum.AutomaticSize.X
+textLabel_005.Size = UDim2.fromOffset(0, 20)
+textLabel_005.Parent = frame_012
+local frame_017 = Instance.new("Frame")
+frame_017.LayoutOrder = 50
+frame_017.Name = "frame_017"
+frame_017.BackgroundTransparency = 1
+frame_017.ZIndex = 4
+frame_017.BorderSizePixel = 0
+frame_017.Size = UDim2.fromOffset(14, 16)
+frame_017.Parent = frame_012
+local frame_018 = Instance.new("Frame")
+frame_018.AnchorPoint = Vector2.new(0.5, 0.5)
+frame_018.BackgroundTransparency = 0.62
+frame_018.Name = "frame_018"
+frame_018.Position = UDim2.fromScale(0.5, 0.5)
+frame_018.BackgroundColor3 = Color3.fromRGB(150, 152, 175)
+frame_018.ZIndex = 4
+frame_018.BorderSizePixel = 0
+frame_018.Size = UDim2.fromOffset(1, 16)
+frame_018.Parent = frame_017
+local uIGradient_008 = Instance.new("UIGradient")
+uIGradient_008.Rotation = 90
+uIGradient_008.Transparency = NumberSequence.new(
+    {
+        NumberSequenceKeypoint.new(0, 0.85), NumberSequenceKeypoint.new(0.5, 0),
+        NumberSequenceKeypoint.new(1, 0.85)
+    }
+)
+uIGradient_008.Parent = frame_018
+local imageLabel_007 = Instance.new("ImageLabel")
+imageLabel_007.ImageColor3 = Color3.fromRGB(240, 240, 245)
+imageLabel_007.ScaleType = Enum.ScaleType.Fit
+imageLabel_007.ImageTransparency = 0.25
+imageLabel_007.Image = "rbxassetid://136533241128438"
+imageLabel_007.Name = "imageLabel_007"
+imageLabel_007.LayoutOrder = 51
+imageLabel_007.ZIndex = 4
+imageLabel_007.BackgroundTransparency = 1
+imageLabel_007.Size = UDim2.fromOffset(15, 15)
+imageLabel_007.Parent = frame_012
+local textLabel_006 = Instance.new("TextLabel")
+textLabel_006.LayoutOrder = 52
+textLabel_006.TextColor3 = Color3.fromRGB(240, 240, 245)
+textLabel_006.TextTransparency = 0.05
+textLabel_006.Text = "00:00"
+textLabel_006.Font = Enum.Font.GothamMedium
+textLabel_006.Name = "textLabel_006"
+textLabel_006.BackgroundTransparency = 1
+textLabel_006.TextSize = 14
+textLabel_006.ZIndex = 4
+textLabel_006.AutomaticSize = Enum.AutomaticSize.X
+textLabel_006.Size = UDim2.fromOffset(0, 20)
+textLabel_006.Parent = frame_012
+local textSize2 = TextService:GetTextSize(
+    "999", 14, Enum.Font.GothamBold, Vector2.new(9000000000, 9000000000)
+)
+local textSize3 = TextService:GetTextSize(
+    "999ms", 14, Enum.Font.GothamBold, Vector2.new(9000000000, 9000000000)
+)
+local textSize4 = TextService:GetTextSize(
+    "00:00", 14, Enum.Font.GothamBold, Vector2.new(9000000000, 9000000000)
+)
+textLabel_004.AutomaticSize = Enum.AutomaticSize.None
+textLabel_004.Size = UDim2.fromOffset(math.ceil(textSize2.X), 20)
+textLabel_004.TextXAlignment = Enum.TextXAlignment.Left
+textLabel_006.AutomaticSize = Enum.AutomaticSize.None
+textLabel_006.Size = UDim2.fromOffset(math.ceil(textSize4.X), 20)
+textLabel_006.TextXAlignment = Enum.TextXAlignment.Left
+textLabel_005.AutomaticSize = Enum.AutomaticSize.None
+textLabel_005.Size = UDim2.fromOffset(math.ceil(textSize3.X), 20)
+textLabel_005.TextXAlignment = Enum.TextXAlignment.Left
+local Stats = game:GetService("Stats")
+
+local connection_render_stepped_1 = RunService.RenderStepped:Connect(function(deltaTime) end)
+
+textLabel_006.Text = "20:43"
+canvasGroup_002.Visible = true
+
+local connection_render_stepped_2 = RunService.RenderStepped:Connect(
+    function(deltaTime2)
+        connection_render_stepped_2:Disconnect()
+    end
+)
+
+local imageButton_001 = Instance.new("ImageButton")
+imageButton_001.AutoButtonColor = false
+imageButton_001.Selectable = false
+imageButton_001.ImageColor3 = Color3.fromRGB(255, 255, 255)
+imageButton_001.ScaleType = Enum.ScaleType.Fit
+imageButton_001.Active = true
+imageButton_001.BackgroundTransparency = 1
+imageButton_001.AnchorPoint = Vector2.new(1, 0.5)
+imageButton_001.Image = ""
+imageButton_001.Name = "imageButton_001"
+imageButton_001.Position = UDim2.new(1, -10, 0.5, 0)
+imageButton_001.Visible = false
+imageButton_001.ZIndex = 950
+imageButton_001.BorderSizePixel = 0
+imageButton_001.Size = UDim2.fromOffset(54, 54)
+imageButton_001.Parent = screenGui_001
+
+local connection_input_began_5 = imageButton_001.InputBegan:Connect(
+    function(input11, gameProcessed11) end
+)
+
+local connection_input_ended_4 = UserInputService.InputEnded:Connect(
+    function(input12, gameProcessed12) end
+)
+
+local connection_input_changed_4 = UserInputService.InputChanged:Connect(
+    function(input13, gameProcessed13) end
+)
+
+local connection_input_began_6 = imageButton_001.InputBegan:Connect(
+    function(input14, gameProcessed14) end
+)
+
+local connection_input_ended_5 = imageButton_001.InputEnded:Connect(
+    function(input15, gameProcessed15) end
+)
+
+local frame_019 = Instance.new("Frame")
+frame_019.AnchorPoint = Vector2.new(0, 0)
+frame_019.Name = "frame_019"
+frame_019.Position = UDim2.new(0, 18, 0, 18)
+frame_019.BackgroundTransparency = 1
+frame_019.ZIndex = 400
+frame_019.AutomaticSize = Enum.AutomaticSize.Y
+frame_019.Size = UDim2.fromOffset(268, 0)
+frame_019.Parent = screenGui_001
+Instance.new("UIShadow")
+
+getgenv().shitaroebet = {
+    alive = true, browsers = {},
+    conns = {
+        connection_input_began_1, connection_descendant_added_1, connection_input_began_2,
+        connection_input_ended_1, connection_input_changed_1, connection_input_began_3,
+        connection_input_ended_2, connection_input_changed_2, connection_input_began_4,
+        connection_input_ended_3, connection_input_changed_3, connection_render_stepped_1,
+        connection_input_began_5, connection_input_ended_4, connection_input_changed_4,
+        connection_input_began_6, connection_input_ended_5
+    }, cursor = false, cursorlist = {}, cursors = {}, dir = "shitarocfgs", drawmask = {},
+    forcemobile = false, hotkeys = true,
+    icons = {
+        activity = 137527339160230, banknote = 113703117675594, bell = 84691420588185,
+        book = 74111869099427, bot = 70979486241131, box = 117371753006597, boxes = 95055252135506,
+        brain = 116902501990569, bug = 75649814233484, car = 91451724283877,
+        ["car-front"] = 79993076477613, check = 86817768619372, ["chevron-down"] = 71457658246709,
+        ["chevron-right"] = 101007429951147, ["chevron-up"] = 98648581502859,
+        ["circle-dot"] = 122878673716704, ["clipboard-paste"] = 79192963603923,
+        clock = 136533241128438, code = 75851496262862, cog = 123222732420633,
+        coins = 117341212186115, compass = 73836660434977, copy = 116378866141355,
+        crosshair = 83752373575368, crown = 92253403464658, database = 99154172590159,
+        dices = 116678154854810, ellipsis = 101330725759187, eye = 127234874352422,
+        ["eye-off"] = 85207295981701, ["file-text"] = 92774566080911, fish = 114555142566431,
+        flame = 125012650497883, folder = 77937190465422, footprints = 80792036653047,
+        ["gamepad-2"] = 99293705721130, gauge = 128279962545721, ghost = 132705178126217,
+        globe = 125685532120024, hand = 83088528355903, heart = 88525382655929,
+        home = 109841253338329, image = 114022611279795, info = 120620848266512,
+        key = 83474888140571, keyboard = 121978468376124, layers = 114499998778667,
+        link = 86131768436965, list = 101699539545687, lock = 119765975153029,
+        ["log-out"] = 140299936053191, map = 131325044235094, ["map-pin"] = 137091405832737,
+        minus = 95070996149109, monitor = 70520152532392, ["mouse-pointer"] = 113428527051320,
+        move = 77028714324861, package = 106101842173393, palette = 127369887384101,
+        ["person-standing"] = 101118444346965, pickaxe = 111300940329486, pipette = 104047428948587,
+        plus = 101123124881873, power = 89331085993646, radar = 132868138496209,
+        ["refresh-cw"] = 106497040962250, rocket = 109537053598807, save = 122894934359450,
+        ["scan-eye"] = 109514269737059, search = 72296609649861, send = 94849431195865,
+        settings = 106205298246017, ["settings-2"] = 109485777305919, shield = 106509993556171,
+        ["shield-check"] = 71867984579031, shirt = 128162112866809,
+        ["shopping-cart"] = 79435149356304, skull = 101060850237115,
+        ["sliders-horizontal"] = 125396339381135, sparkles = 105634041692696, star = 72669221096319,
+        ["swatch-book"] = 70990631477660, sword = 121406454377051, swords = 99199363807265,
+        target = 121091323240554, terminal = 102379915564176, ["toggle-right"] = 129483325318573,
+        ["trash-2"] = 126010725826757, user = 114567720540659, users = 85332511060401,
+        ["users-round"] = 103880524805720, video = 99411215690870, ["volume-2"] = 129861259578431,
+        ["wand-sparkles"] = 115623066336607, wifi = 104941258142372, wrench = 85345725497834,
+        x = 116396312853810, zap = 109718589733073
+    }, logo = "", mobile = false, noticecap = 5, notices = true, opener = false,
+    order = {"menu|hotkeyspot", "menu|markspot2", "menu|openerspot"},
+    pool = {
+        ["menu|hotkeyspot"] = {kind = "string", get = function() end, set = function() end},
+        ["menu|markspot2"] = {kind = "string", get = function() end, set = function() end},
+        ["menu|openerspot"] = {kind = "string", get = function() end, set = function() end}
+    }, scale = 1, scr = screenGui_001, shown = false, sound = false,
+    theme = {
+        accent = Color3.fromRGB(255, 255, 255), bg = Color3.fromRGB(6, 6, 8),
+        dim = Color3.fromRGB(122, 122, 134), glow = Color3.fromRGB(150, 152, 175),
+        head = Color3.fromRGB(15, 15, 18), line = Color3.fromRGB(52, 52, 64),
+        panel = Color3.fromRGB(11, 11, 14), side = Color3.fromRGB(12, 12, 15),
+        text = Color3.fromRGB(240, 240, 245)
+    }, tone = "Click", tonelist = {"Click", "Bubble", "Hentai"}, tones = {}, ver = "67",
+    watermark = true, wins = {}, apply = function() end, ask = function() end,
+    browser = function(_, param1)
+        local frame_020 = Instance.new("Frame")
+        frame_020.Visible = false
+        frame_020.BackgroundColor3 = Color3.fromRGB(6, 6, 8)
+        frame_020.Name = "frame_020"
+        frame_020.Active = true
+        frame_020.Position = UDim2.new(
+            0.5, (-math.floor(math.max(math.floor(param1.size.X), param1.min.X) * 0.5)), 0.5,
+            (-math.floor(math.max(math.floor(param1.size.Y), param1.min.Y) * 0.5))
+        )
+        frame_020.ZIndex = 60
+        frame_020.BorderSizePixel = 0
+        frame_020.Size = UDim2.fromOffset(
+            math.max(math.floor(param1.size.X), param1.min.X),
+            math.max(math.floor(param1.size.Y), param1.min.Y)
+        )
+        frame_020.Parent = screenGui_001
+        local uICorner_007 = Instance.new("UICorner")
+        uICorner_007.CornerRadius = UDim.new(0, 9)
+        uICorner_007.Parent = frame_020
+        local uIStroke_004 = Instance.new("UIStroke")
+        uIStroke_004.Color = Color3.fromRGB(52, 52, 64)
+        uIStroke_004.Transparency = 0.55
+        uIStroke_004.Parent = frame_020
+        local uIShadow_003 = Instance.new("UIShadow")
+        uIShadow_003.Offset = UDim2.fromOffset(0, 6)
+        uIShadow_003.Transparency = 0.4
+        uIShadow_003.BlurRadius = UDim.new(0, 26)
+        uIShadow_003.Color = Color3.fromRGB(6, 6, 8)
+        uIShadow_003.ZIndex = -1
+        uIShadow_003.Spread = UDim2.fromOffset(-4, -4)
+        uIShadow_003.Parent = frame_020
+        local frame_021 = Instance.new("Frame")
+        frame_021.Name = "frame_021"
+        frame_021.Active = true
+        frame_021.BackgroundColor3 = Color3.fromRGB(15, 15, 18)
+        frame_021.ZIndex = 61
+        frame_021.BorderSizePixel = 0
+        frame_021.Size = UDim2.new(1, 0, 0, 34)
+        frame_021.Parent = frame_020
+        local uICorner_008 = Instance.new("UICorner")
+        uICorner_008.CornerRadius = UDim.new(0, 9)
+        uICorner_008.Parent = frame_021
+        local frame_022 = Instance.new("Frame")
+        frame_022.AnchorPoint = Vector2.new(0, 1)
+        frame_022.Name = "frame_022"
+        frame_022.Position = UDim2.fromScale(0, 1)
+        frame_022.BackgroundColor3 = Color3.fromRGB(15, 15, 18)
+        frame_022.ZIndex = 61
+        frame_022.BorderSizePixel = 0
+        frame_022.Size = UDim2.new(1, 0, 0, 9)
+        frame_022.Parent = frame_021
+        local frame_023 = Instance.new("Frame")
+        frame_023.BackgroundTransparency = 0.45
+        frame_023.Name = "frame_023"
+        frame_023.Position = UDim2.fromOffset(0, 34)
+        frame_023.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        frame_023.ZIndex = 62
+        frame_023.BorderSizePixel = 0
+        frame_023.Size = UDim2.new(1, 0, 0, 2)
+        frame_023.Parent = frame_020
+        local uIGradient_009 = Instance.new("UIGradient")
+        uIGradient_009.Rotation = 0
+        uIGradient_009.Transparency = NumberSequence.new(
+            {
+                NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(0.12, 0.2),
+                NumberSequenceKeypoint.new(0.5, 0), NumberSequenceKeypoint.new(0.88, 0.2),
+                NumberSequenceKeypoint.new(1, 1)
+            }
+        )
+        uIGradient_009.Parent = frame_023
+        local imageButton_002 = Instance.new("ImageButton")
+        imageButton_002.AutoButtonColor = false
+        imageButton_002.Selectable = false
+        imageButton_002.ImageColor3 = Color3.fromRGB(122, 122, 134)
+        imageButton_002.ScaleType = Enum.ScaleType.Fit
+        imageButton_002.ImageTransparency = 0.25
+        imageButton_002.BackgroundTransparency = 1
+        imageButton_002.AnchorPoint = Vector2.new(0, 0.5)
+        imageButton_002.Image = "rbxassetid://101007429951147"
+        imageButton_002.Name = "imageButton_002"
+        imageButton_002.Position = UDim2.new(0, 8, 0.5, 0)
+        imageButton_002.BackgroundColor3 = Color3.fromRGB(11, 11, 14)
+        imageButton_002.ZIndex = 63
+        imageButton_002.BorderSizePixel = 0
+        imageButton_002.Size = UDim2.fromOffset(22, 22)
+        imageButton_002.Parent = frame_021
+        local uICorner_009 = Instance.new("UICorner")
+        uICorner_009.CornerRadius = UDim.new(0, 6)
+        uICorner_009.Parent = imageButton_002
+
+        local connection_mouse_enter_1 = imageButton_002.MouseEnter:Connect(
+            function()
+                local tween8 = TweenService:Create(
+                    imageButton_002,
+                    TweenInfo.new(0.24, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+                    {BackgroundTransparency = 0.35, ImageColor3 = Color3.fromRGB(240, 240, 245), ImageTransparency = 0}
+                )
+                tween8:Play()
+            end
+        )
+
+        local connection_mouse_leave_1 = imageButton_002.MouseLeave:Connect(
+            function()
+                local tween9 = TweenService:Create(
+                    imageButton_002,
+                    TweenInfo.new(0.24, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+                    {BackgroundTransparency = 1, ImageColor3 = Color3.fromRGB(122, 122, 134), ImageTransparency = 0.25}
+                )
+                tween9:Play()
+            end
+        )
+
+        local imageButton_003 = Instance.new("ImageButton")
+        imageButton_003.AutoButtonColor = false
+        imageButton_003.Selectable = false
+        imageButton_003.ImageColor3 = Color3.fromRGB(122, 122, 134)
+        imageButton_003.ScaleType = Enum.ScaleType.Fit
+        imageButton_003.ImageTransparency = 0.25
+        imageButton_003.BackgroundTransparency = 1
+        imageButton_003.AnchorPoint = Vector2.new(0, 0.5)
+        imageButton_003.Image = "rbxassetid://101007429951147"
+        imageButton_003.Name = "imageButton_003"
+        imageButton_003.Position = UDim2.new(0, 32, 0.5, 0)
+        imageButton_003.BackgroundColor3 = Color3.fromRGB(11, 11, 14)
+        imageButton_003.ZIndex = 63
+        imageButton_003.BorderSizePixel = 0
+        imageButton_003.Size = UDim2.fromOffset(22, 22)
+        imageButton_003.Parent = frame_021
+        local uICorner_010 = Instance.new("UICorner")
+        uICorner_010.CornerRadius = UDim.new(0, 6)
+        uICorner_010.Parent = imageButton_003
+
+        local connection_mouse_enter_2 = imageButton_003.MouseEnter:Connect(
+            function()
+                local tween10 = TweenService:Create(
+                    imageButton_003,
+                    TweenInfo.new(0.24, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+                    {BackgroundTransparency = 0.35, ImageColor3 = Color3.fromRGB(240, 240, 245), ImageTransparency = 0}
+                )
+                tween10:Play()
+            end
+        )
+
+        local connection_mouse_leave_2 = imageButton_003.MouseLeave:Connect(
+            function()
+                local tween11 = TweenService:Create(
+                    imageButton_003,
+                    TweenInfo.new(0.24, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+                    {BackgroundTransparency = 1, ImageColor3 = Color3.fromRGB(122, 122, 134), ImageTransparency = 0.25}
+                )
+                tween11:Play()
+            end
+        )
+
+        local imageButton_004 = Instance.new("ImageButton")
+        imageButton_004.AutoButtonColor = false
+        imageButton_004.Selectable = false
+        imageButton_004.ImageColor3 = Color3.fromRGB(122, 122, 134)
+        imageButton_004.ScaleType = Enum.ScaleType.Fit
+        imageButton_004.ImageTransparency = 0.25
+        imageButton_004.BackgroundTransparency = 1
+        imageButton_004.AnchorPoint = Vector2.new(0, 0.5)
+        imageButton_004.Image = "rbxassetid://106497040962250"
+        imageButton_004.Name = "imageButton_004"
+        imageButton_004.Position = UDim2.new(0, 56, 0.5, 0)
+        imageButton_004.BackgroundColor3 = Color3.fromRGB(11, 11, 14)
+        imageButton_004.ZIndex = 63
+        imageButton_004.BorderSizePixel = 0
+        imageButton_004.Size = UDim2.fromOffset(22, 22)
+        imageButton_004.Parent = frame_021
+        local uICorner_011 = Instance.new("UICorner")
+        uICorner_011.CornerRadius = UDim.new(0, 6)
+        uICorner_011.Parent = imageButton_004
+
+        local connection_mouse_enter_3 = imageButton_004.MouseEnter:Connect(
+            function()
+                local tween12 = TweenService:Create(
+                    imageButton_004,
+                    TweenInfo.new(0.24, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+                    {BackgroundTransparency = 0.35, ImageColor3 = Color3.fromRGB(240, 240, 245), ImageTransparency = 0}
+                )
+                tween12:Play()
+            end
+        )
+
+        local connection_mouse_leave_3 = imageButton_004.MouseLeave:Connect(
+            function()
+                local tween13 = TweenService:Create(
+                    imageButton_004,
+                    TweenInfo.new(0.24, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+                    {BackgroundTransparency = 1, ImageColor3 = Color3.fromRGB(122, 122, 134), ImageTransparency = 0.25}
+                )
+                tween13:Play()
+            end
+        )
+
+        local imageButton_005 = Instance.new("ImageButton")
+        imageButton_005.AutoButtonColor = false
+        imageButton_005.Selectable = false
+        imageButton_005.ImageColor3 = Color3.fromRGB(122, 122, 134)
+        imageButton_005.ScaleType = Enum.ScaleType.Fit
+        imageButton_005.ImageTransparency = 0.25
+        imageButton_005.BackgroundTransparency = 1
+        imageButton_005.AnchorPoint = Vector2.new(1, 0.5)
+        imageButton_005.Image = "rbxassetid://116396312853810"
+        imageButton_005.Name = "imageButton_005"
+        imageButton_005.Position = UDim2.new(1, -8, 0.5, 0)
+        imageButton_005.BackgroundColor3 = Color3.fromRGB(11, 11, 14)
+        imageButton_005.ZIndex = 63
+        imageButton_005.BorderSizePixel = 0
+        imageButton_005.Size = UDim2.fromOffset(22, 22)
+        imageButton_005.Parent = frame_021
+        local uICorner_012 = Instance.new("UICorner")
+        uICorner_012.CornerRadius = UDim.new(0, 6)
+        uICorner_012.Parent = imageButton_005
+
+        local connection_mouse_enter_4 = imageButton_005.MouseEnter:Connect(
+            function()
+                local tween14 = TweenService:Create(
+                    imageButton_005,
+                    TweenInfo.new(0.24, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+                    {BackgroundTransparency = 0.35, ImageColor3 = Color3.fromRGB(240, 240, 245), ImageTransparency = 0}
+                )
+                tween14:Play()
+            end
+        )
+
+        local connection_mouse_leave_4 = imageButton_005.MouseLeave:Connect(
+            function()
+                local tween15 = TweenService:Create(
+                    imageButton_005,
+                    TweenInfo.new(0.24, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+                    {BackgroundTransparency = 1, ImageColor3 = Color3.fromRGB(122, 122, 134), ImageTransparency = 0.25}
+                )
+                tween15:Play()
+            end
+        )
+
+        imageButton_002.Rotation = 180
+        local textBox_001 = Instance.new("TextBox")
+        textBox_001.AnchorPoint = Vector2.new(0, 0.5)
+        textBox_001.PlaceholderColor3 = Color3.fromRGB(122, 122, 134)
+        textBox_001.PlaceholderText = "type a link"
+        textBox_001.BorderSizePixel = 0
+        textBox_001.Size = UDim2.new(1, -118, 0, 24)
+        textBox_001.TextColor3 = Color3.fromRGB(240, 240, 245)
+        textBox_001.Text = param1.url
+        textBox_001.ZIndex = 63
+        textBox_001.TextXAlignment = Enum.TextXAlignment.Left
+        textBox_001.TextTruncate = Enum.TextTruncate.AtEnd
+        textBox_001.Font = Enum.Font.GothamMedium
+        textBox_001.Name = "textBox_001"
+        textBox_001.Position = UDim2.new(0, 82, 0.5, 0)
+        textBox_001.TextSize = 13
+        textBox_001.ClearTextOnFocus = false
+        textBox_001.BackgroundTransparency = 0.25
+        textBox_001.BackgroundColor3 = Color3.fromRGB(6, 6, 8)
+        textBox_001.Parent = frame_021
+        local uICorner_013 = Instance.new("UICorner")
+        uICorner_013.CornerRadius = UDim.new(0, 6)
+        uICorner_013.Parent = textBox_001
+        textBox_001.FontFace = Font.new(
+            "rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Medium
+        )
+        local uIPadding_005 = Instance.new("UIPadding")
+        uIPadding_005.PaddingLeft = UDim.new(0, 9)
+        uIPadding_005.PaddingRight = UDim.new(0, 9)
+        uIPadding_005.Parent = textBox_001
+        local uIStroke_005 = Instance.new("UIStroke")
+        uIStroke_005.Color = Color3.fromRGB(52, 52, 64)
+        uIStroke_005.Transparency = 0.6
+        uIStroke_005.Parent = textBox_001
+        local frame_024 = Instance.new("Frame")
+        frame_024.BackgroundTransparency = 0.2
+        frame_024.ClipsDescendants = true
+        frame_024.Name = "frame_024"
+        frame_024.Position = UDim2.fromOffset(8, 42)
+        frame_024.BackgroundColor3 = Color3.fromRGB(6, 6, 8)
+        frame_024.ZIndex = 61
+        frame_024.BorderSizePixel = 0
+        frame_024.Size = UDim2.new(1, -16, 1, -68)
+        frame_024.Parent = frame_020
+        local uICorner_014 = Instance.new("UICorner")
+        uICorner_014.CornerRadius = UDim.new(0, 7)
+        uICorner_014.Parent = frame_024
+        local uIStroke_006 = Instance.new("UIStroke")
+        uIStroke_006.Color = Color3.fromRGB(52, 52, 64)
+        uIStroke_006.Transparency = 0.72
+        uIStroke_006.Parent = frame_024
+        local imageLabel_008 = Instance.new("ImageLabel")
+        imageLabel_008.ScaleType = Enum.ScaleType.Stretch
+        imageLabel_008.ImageTransparency = 1
+        imageLabel_008.Image = ""
+        imageLabel_008.Name = "imageLabel_008"
+        imageLabel_008.BackgroundTransparency = 1
+        imageLabel_008.ResampleMode = Enum.ResamplerMode.Default
+        imageLabel_008.ZIndex = 62
+        imageLabel_008.BorderSizePixel = 0
+        imageLabel_008.Size = UDim2.fromScale(1, 1)
+        imageLabel_008.Parent = frame_024
+        local uICorner_015 = Instance.new("UICorner")
+        uICorner_015.CornerRadius = UDim.new(0, 7)
+        uICorner_015.Parent = imageLabel_008
+        local textLabel_007 = Instance.new("TextLabel")
+        textLabel_007.TextWrapped = true
+        textLabel_007.TextColor3 = Color3.fromRGB(122, 122, 134)
+        textLabel_007.TextTransparency = 0.25
+        textLabel_007.Text = "host offline"
+        textLabel_007.AnchorPoint = Vector2.new(0.5, 0.5)
+        textLabel_007.Font = Enum.Font.GothamBold
+        textLabel_007.Name = "textLabel_007"
+        textLabel_007.Position = UDim2.fromScale(0.5, 0.5)
+        textLabel_007.BackgroundTransparency = 1
+        textLabel_007.ZIndex = 63
+        textLabel_007.TextSize = 12
+        textLabel_007.Size = UDim2.new(1, -40, 0, 40)
+        textLabel_007.Parent = frame_024
+        local imageButton_006 = Instance.new("ImageButton")
+        imageButton_006.AutoButtonColor = false
+        imageButton_006.Selectable = false
+        imageButton_006.Name = "imageButton_006"
+        imageButton_006.ImageTransparency = 1
+        imageButton_006.ZIndex = 64
+        imageButton_006.BackgroundTransparency = 1
+        imageButton_006.Size = UDim2.fromScale(1, 1)
+        imageButton_006.Parent = frame_024
+        local textBox_002 = Instance.new("TextBox")
+        textBox_002.ZIndex = 61
+        textBox_002.Text = ""
+        textBox_002.Name = "textBox_002"
+        textBox_002.Position = UDim2.fromOffset(-40, -40)
+        textBox_002.TextTransparency = 1
+        textBox_002.ClearTextOnFocus = false
+        textBox_002.BackgroundTransparency = 1
+        textBox_002.Size = UDim2.fromOffset(10, 10)
+        textBox_002.Parent = frame_020
+        local textLabel_008 = Instance.new("TextLabel")
+        textLabel_008.TextColor3 = Color3.fromRGB(122, 122, 134)
+        textLabel_008.TextTransparency = 0.3
+        textLabel_008.Text = "idle"
+        textLabel_008.BackgroundTransparency = 1
+        textLabel_008.TextXAlignment = Enum.TextXAlignment.Left
+        textLabel_008.AnchorPoint = Vector2.new(0, 1)
+        textLabel_008.Font = Enum.Font.GothamMedium
+        textLabel_008.Name = "textLabel_008"
+        textLabel_008.Position = UDim2.new(0, 12, 1, -6)
+        textLabel_008.TextTruncate = Enum.TextTruncate.AtEnd
+        textLabel_008.ZIndex = 62
+        textLabel_008.TextSize = 11
+        textLabel_008.Size = UDim2.new(1, -46, 0, 14)
+        textLabel_008.Parent = frame_020
+        local imageButton_007 = Instance.new("ImageButton")
+        imageButton_007.AutoButtonColor = false
+        imageButton_007.Selectable = false
+        imageButton_007.ImageColor3 = Color3.fromRGB(122, 122, 134)
+        imageButton_007.ScaleType = Enum.ScaleType.Fit
+        imageButton_007.ImageTransparency = 0.45
+        imageButton_007.AnchorPoint = Vector2.new(1, 1)
+        imageButton_007.Image = "rbxassetid://77028714324861"
+        imageButton_007.Name = "imageButton_007"
+        imageButton_007.Position = UDim2.new(1, -4, 1, -4)
+        imageButton_007.Rotation = 45
+        imageButton_007.ZIndex = 63
+        imageButton_007.BackgroundTransparency = 1
+        imageButton_007.Size = UDim2.fromOffset(18, 18)
+        imageButton_007.Parent = frame_020
+        local AssetService = game:GetService("AssetService")
+        -- join us: https://discord.gg/x7YbZeezpm
+        local connection_event_1 = imageButton_005.MouseButton1Click:Connect(function() end)
+
+        for _, item in ipairs(
+            {
+                {imageButton = imageButton_002, sound2 = sound_003, playbackSpeed = 1.18, volume = 0.22},
+                {imageButton = imageButton_003, sound2 = sound_004, playbackSpeed = 1.18, volume = 0.22},
+                {imageButton = imageButton_004, sound2 = sound_001, playbackSpeed = 1.22, volume = 0.26},
+            }
+        ) do
+            local connection_event_2 = item.imageButton.MouseButton1Click:Connect(
+                function()
+                    item.sound2.PlaybackSpeed = item.playbackSpeed
+                    item.sound2.Volume = item.volume
+                    item.sound2.TimePosition = 0
+                    item.sound2:Play()
+                end
+            )
+        end
+
+        local connection_event_3 = textBox_001.FocusLost:Connect(
+            function(enterPressed, inputObject)
+                local tween16 = TweenService:Create(
+                    uIStroke_005,
+                    TweenInfo.new(0.24, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+                    {Transparency = 0.6}
+                )
+                tween16:Play()
+                textBox_001.Text = tostring(param1.url)
+                textLabel_008.Text = "loading"
+            end
+        )
+
+        local connection_event_4 = textBox_001.Focused:Connect(
+            function()
+                local tween17 = TweenService:Create(
+                    uIStroke_005,
+                    TweenInfo.new(0.24, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+                    {Transparency = 0.3}
+                )
+                tween17:Play()
+            end
+        )
+
+        local connection_event_5 = imageButton_006.MouseButton1Click:Connect(
+            function()
+                UserInputService:GetMouseLocation()
+                GuiService:GetGuiInset()
+            end
+        )
+
+        local connection_event_6 = imageButton_006.MouseButton2Click:Connect(
+            function()
+                UserInputService:GetMouseLocation()
+                GuiService:GetGuiInset()
+            end
+        )
+
+        local connection_input_changed_5 = imageButton_006.InputChanged:Connect(
+            function(input16, gameProcessed16) end
+        )
+
+        local connection_input_began_7 = imageButton_006.InputBegan:Connect(
+            function(input17, gameProcessed17) end
+        )
+
+        local changedSignal = textBox_002:GetPropertyChangedSignal("Text")
+
+        local connection_event_7 = changedSignal:Connect(function() end)
+
+        local connection_input_began_8 = UserInputService.InputBegan:Connect(
+            function(input18, gameProcessed18) end
+        )
+
+        local connection_input_began_9 = imageButton_007.InputBegan:Connect(
+            function(input19, gameProcessed19) end
+        )
+
+        local connection_input_ended_6 = imageButton_007.InputEnded:Connect(
+            function(input20, gameProcessed20) end
+        )
+
+        local connection_event_8 = RunService.Heartbeat:Connect(function(deltaTime3) end)
+
+        frame_020:GetDescendants()
+        frame_020.BackgroundTransparency = 1
+        uIStroke_004.Transparency = 1
+        uIShadow_003.Transparency = 1
+        frame_021.BackgroundTransparency = 1
+        frame_022.BackgroundTransparency = 1
+        imageButton_002.BackgroundTransparency = 1
+        imageButton_002.ImageTransparency = 1
+        imageButton_003.BackgroundTransparency = 1
+        imageButton_003.ImageTransparency = 1
+        imageButton_004.BackgroundTransparency = 1
+        imageButton_004.ImageTransparency = 1
+        imageButton_005.BackgroundTransparency = 1
+        imageButton_005.ImageTransparency = 1
+        textBox_001.BackgroundTransparency = 1
+        textBox_001.TextTransparency = 1
+        uIStroke_005.Transparency = 1
+        frame_023.BackgroundTransparency = 1
+        frame_024.BackgroundTransparency = 1
+        uIStroke_006.Transparency = 1
+        imageLabel_008.BackgroundTransparency = 1
+        imageLabel_008.ImageTransparency = 1
+        textLabel_007.BackgroundTransparency = 1
+        textLabel_007.TextTransparency = 1
+        imageButton_006.BackgroundTransparency = 1
+        imageButton_006.ImageTransparency = 1
+        textBox_002.BackgroundTransparency = 1
+        textBox_002.TextTransparency = 1
+        textLabel_008.BackgroundTransparency = 1
+        textLabel_008.TextTransparency = 1
+        imageButton_007.BackgroundTransparency = 1
+        imageButton_007.ImageTransparency = 1
+
+        local connection_input_began_10 = frame_021.InputBegan:Connect(
+            function(input21, gameProcessed21) end
+        )
+
+        local connection_input_ended_7 = UserInputService.InputEnded:Connect(
+            function(input22, gameProcessed22) end
+        )
+
+        local connection_input_changed_6 = UserInputService.InputChanged:Connect(
+            function(input23, gameProcessed23) end
+        )
+    end, chime = function() end, closeask = function() end, closepopup = function() end,
+    erase = function() end, fetch = function() end, freeze = function() end, hook = function() end,
+    hotkeyspot = function() end,
+    notify = function(_, param2)
+        TextService:GetTextSize(
+            tostring(param2.text), 11, Enum.Font.GothamBold, Vector2.new(9000000000, 9000000000)
+        )
+    end,
+    openericon = function(_, param3)
+        imageButton_001.Image = tostring(param3)
+    end, openerspot = function() end, popup = function() end, recolor = function() end,
+    retitle = function() end,
+    roster = function()
+        makefolder("shitarocfgs")
+    end, setcursor = function() end, sethotkeys = function() end, setnotices = function() end,
+    setopener = function()
+        imageButton_001.Visible = true
+    end, setsound = function() end, setstyle = function() end, settone = function() end,
+    setwatermark = function() end, store = function() end, thaw = function() end,
+    unhook = function() end,
+    unload = function()
+        imageLabel_008.ImageTransparency = 1
+        textLabel_007.Visible = true
+        frame_020:Destroy()
+
+        for _, connection in ipairs(
+            {
+                connection_input_began_1, connection_descendant_added_1, connection_input_began_2,
+                connection_input_ended_1, connection_input_changed_1, connection_input_began_3,
+                connection_input_ended_2, connection_input_changed_2, connection_input_began_4,
+                connection_input_ended_3, connection_input_changed_3, connection_render_stepped_1,
+                connection_input_began_5, connection_input_ended_4, connection_input_changed_4,
+                connection_input_began_6, connection_input_ended_5, connection_mouse_enter_1,
+                connection_mouse_leave_1, connection_mouse_enter_2, connection_mouse_leave_2,
+                connection_mouse_enter_3, connection_mouse_leave_3, connection_mouse_enter_4,
+                connection_mouse_leave_4, connection_event_1, connection_event_2, connection35,
+                connection36, connection_event_3, connection_event_4, connection_event_5,
+                connection_event_6, connection_input_changed_5, connection_input_began_7,
+                connection_event_7, connection_input_began_8, connection_input_began_9,
+                connection_input_ended_6, connection_event_8, connection_input_began_10,
+                connection_input_ended_7, connection_input_changed_6,
+            }
+        ) do
+            connection:Disconnect()
+        end
+
+        screenGui_001:Destroy()
+    end, wake = function() end,
+    watch = function()
+        makefolder("shitarocfgs")
+    end, watermarkspot = function() end,
+    window = function(_, num1)
+        local frame_025 = Instance.new("Frame")
+        frame_025.AnchorPoint = Vector2.new(0.5, 0.5)
+        frame_025.Name = "frame_025"
+        frame_025.Active = true
+        frame_025.Position = UDim2.fromScale(0.5, 0.5)
+        frame_025.BackgroundTransparency = 1
+        frame_025.BorderSizePixel = 0
+        frame_025.Size = num1.size
+        frame_025.Parent = screenGui_001
+        Instance.new("UIShadow")
+        local frame_026 = Instance.new("Frame")
+        frame_026.Name = "frame_026"
+        frame_026.BackgroundTransparency = 1
+        frame_026.ZIndex = 1
+        frame_026.BorderSizePixel = 0
+        frame_026.Size = UDim2.fromScale(1, 1)
+        frame_026.Parent = frame_025
+        local uICorner_016 = Instance.new("UICorner")
+        uICorner_016.CornerRadius = UDim.new(0, num1.radius)
+        uICorner_016.Parent = frame_026
+        local uIShadow_004 = Instance.new("UIShadow")
+        uIShadow_004.Offset = UDim2.new()
+        uIShadow_004.Transparency = 1
+        uIShadow_004.BlurRadius = UDim.new(0, 16)
+        uIShadow_004.Color = Color3.fromRGB(6, 6, 8)
+        uIShadow_004.ZIndex = -1
+        uIShadow_004.Spread = UDim2.fromOffset(2, 2)
+        uIShadow_004.Parent = frame_026
+        local uIShadow_005 = Instance.new("UIShadow")
+        uIShadow_005.Offset = UDim2.new()
+        uIShadow_005.Transparency = 1
+        uIShadow_005.BlurRadius = UDim.new(0, 38)
+        uIShadow_005.Color = Color3.fromRGB(6, 6, 8)
+        uIShadow_005.ZIndex = -2
+        uIShadow_005.Spread = UDim2.fromOffset(12, 12)
+        uIShadow_005.Parent = frame_026
+        local canvasGroup_003 = Instance.new("CanvasGroup")
+        canvasGroup_003.BackgroundColor3 = Color3.fromRGB(6, 6, 8)
+        canvasGroup_003.GroupTransparency = 1
+        canvasGroup_003.Name = "canvasGroup_003"
+        canvasGroup_003.Active = true
+        canvasGroup_003.ClipsDescendants = true
+        canvasGroup_003.ZIndex = 2
+        canvasGroup_003.BorderSizePixel = 0
+        canvasGroup_003.Size = UDim2.fromScale(1, 1)
+        canvasGroup_003.Parent = frame_025
+        local uICorner_017 = Instance.new("UICorner")
+        uICorner_017.CornerRadius = UDim.new(0, num1.radius)
+        uICorner_017.Parent = canvasGroup_003
+        local frame_027 = Instance.new("Frame")
+        frame_027.Name = "frame_027"
+        frame_027.BackgroundTransparency = 1
+        frame_027.ZIndex = 20
+        frame_027.BorderSizePixel = 0
+        frame_027.Size = UDim2.fromScale(1, 1)
+        frame_027.Parent = canvasGroup_003
+        local uICorner_018 = Instance.new("UICorner")
+        uICorner_018.CornerRadius = UDim.new(0, num1.radius)
+        uICorner_018.Parent = frame_027
+        local uIStroke_007 = Instance.new("UIStroke")
+        uIStroke_007.Color = Color3.fromRGB(52, 52, 64)
+        uIStroke_007.Transparency = 0.6
+        uIStroke_007.Parent = frame_027
+        local frame_028 = Instance.new("Frame")
+        frame_028.Name = "frame_028"
+        frame_028.Active = true
+        frame_028.ZIndex = 0
+        frame_028.BackgroundTransparency = 1
+        frame_028.Size = UDim2.fromScale(1, 1)
+        frame_028.Parent = canvasGroup_003
+        local frame_029 = Instance.new("Frame")
+        frame_029.BackgroundColor3 = Color3.fromRGB(6, 6, 8)
+        frame_029.Name = "frame_029"
+        frame_029.Position = UDim2.fromOffset(num1.side, 0)
+        frame_029.ClipsDescendants = true
+        frame_029.ZIndex = 1
+        frame_029.BorderSizePixel = 0
+        frame_029.Size = UDim2.new(1, (-num1.side), 1, 0)
+        frame_029.Parent = canvasGroup_003
+        local uICorner_019 = Instance.new("UICorner")
+        uICorner_019.CornerRadius = UDim.new(0, num1.radius)
+        uICorner_019.Parent = frame_029
+        local frame_030 = Instance.new("Frame")
+        frame_030.Name = "frame_030"
+        frame_030.BackgroundColor3 = Color3.fromRGB(6, 6, 8)
+        frame_030.ZIndex = 1
+        frame_030.BorderSizePixel = 0
+        frame_030.Size = UDim2.new(0, num1.radius, 1, 0)
+        frame_030.Parent = frame_029
+        local frame_031 = Instance.new("Frame")
+        frame_031.Name = "frame_031"
+        frame_031.ClipsDescendants = true
+        frame_031.BackgroundTransparency = 1
+        frame_031.ZIndex = 2
+        frame_031.BorderSizePixel = 0
+        frame_031.Size = UDim2.fromScale(1, 1)
+        local lastUICorner = frame_031
+        local lastOzbwnrnwhovq = frame_029
+
+        for _, item2 in ipairs(
+            {
+                {ozbwnrnwhovqName = "frame_032", backgroundTransparency = 0.42321202229475385, x2 = 3},
+                {ozbwnrnwhovqName = "ahdlzmphyfwd", backgroundTransparency = 0.22216548177551451, x2 = 2},
+                {ozbwnrnwhovqName = "kdjrjurmieuv", backgroundTransparency = 0.41992848478803058, x2 = 4},
+                {ozbwnrnwhovqName = "zeeigvfxfnat", backgroundTransparency = 0.25736527221069416, x2 = 4},
+                {ozbwnrnwhovqName = "izhhkiculnti", backgroundTransparency = 0.45647777601249268, x2 = 2},
+                {ozbwnrnwhovqName = "lohpekhzbmnc", backgroundTransparency = 0.46078498936808593, x2 = 2},
+                {ozbwnrnwhovqName = "pgaqlnjavzvf", backgroundTransparency = 0.25922434536370548, x2 = 4},
+                {ozbwnrnwhovqName = "yhmlvbvmukrd", backgroundTransparency = 0.40080912473814484, x2 = 2},
+                {ozbwnrnwhovqName = "oafudaxkomsv", backgroundTransparency = 0.33196949650443364, x2 = 2},
+                {ozbwnrnwhovqName = "htftivaswaat", backgroundTransparency = 0.39845719928357215, x2 = 4},
+                {ozbwnrnwhovqName = "uqschcljympx", backgroundTransparency = 0.27183570654856276, x2 = 2},
+                {ozbwnrnwhovqName = "dtrbsqkhbcmi", backgroundTransparency = 0.28281571029407787, x2 = 2},
+                {ozbwnrnwhovqName = "crsxzbqvbosp", backgroundTransparency = 0.37577623451590536, x2 = 2},
+            }
+        ) do
+            local previousUICorner = lastUICorner
+            local previousOzbwnrnwhovq = lastOzbwnrnwhovq
+            previousUICorner.Parent = previousOzbwnrnwhovq
+            local frame_032 = Instance.new("Frame")
+            frame_032.AnchorPoint = Vector2.new(0.5, 0.5)
+            frame_032.Name = item2.ozbwnrnwhovqName
+            frame_032.BackgroundTransparency = item2.backgroundTransparency
+            frame_032.Size = UDim2.fromOffset(item2.x2, item2.x2)
+            frame_032.ZIndex = 3
+            frame_032.BorderSizePixel = 0
+            frame_032.BackgroundColor3 = Color3.fromRGB(150, 152, 175)
+            frame_032.Parent = frame_031
+            local uICorner_020 = Instance.new("UICorner")
+            uICorner_020.CornerRadius = UDim.new(1, 0)
+            lastUICorner = uICorner_020
+            lastOzbwnrnwhovq = frame_032
+        end
+
+        local lastVwhpwagmlwoi = UICorner33
+
+        for _, item3 in ipairs(
+            {
+                {parent = crsxzbqvbosp, vwhpwagmlwoiName = "frame_033"},
+                {parent = frame_031, vwhpwagmlwoiName = "kqnjeoufapah"},
+                {parent = frame_031, vwhpwagmlwoiName = "yuggluhhnesj"},
+                {parent = frame_031, vwhpwagmlwoiName = "aeuidtyjoenw"},
+                {parent = frame_031, vwhpwagmlwoiName = "tumlxwvtgmhi"},
+                {parent = frame_031, vwhpwagmlwoiName = "wupmyzgwapyp"},
+                {parent = frame_031, vwhpwagmlwoiName = "hiveirjyupvw"},
+                {parent = frame_031, vwhpwagmlwoiName = "ewpdxkgvbluw"},
+                {parent = frame_031, vwhpwagmlwoiName = "dmmqfanthriw"},
+                {parent = frame_031, vwhpwagmlwoiName = "uopvrsgalhtz"},
+                {parent = frame_031, vwhpwagmlwoiName = "wsixfswquouu"},
+                {parent = frame_031, vwhpwagmlwoiName = "kvnwwczwsofu"},
+                {parent = frame_031, vwhpwagmlwoiName = "fgknbpvqdxob"},
+                {parent = frame_031, vwhpwagmlwoiName = "hanipdihkcxc"},
+                {parent = frame_031, vwhpwagmlwoiName = "ttbebrjttlny"},
+                {parent = frame_031, vwhpwagmlwoiName = "puqgofzekjps"},
+                {parent = frame_031, vwhpwagmlwoiName = "vjeuzhrfthmn"},
+                {parent = frame_031, vwhpwagmlwoiName = "weoqstbielye"},
+                {parent = frame_031, vwhpwagmlwoiName = "urdfnolastoo"},
+                {parent = frame_031, vwhpwagmlwoiName = "rxrtmgkhevgi"},
+                {parent = frame_031, vwhpwagmlwoiName = "xgfvcmmbulcf"},
+                {parent = frame_031, vwhpwagmlwoiName = "odbomwapxpjl"},
+                {parent = frame_031, vwhpwagmlwoiName = "vlolucztuucr"},
+                {parent = frame_031, vwhpwagmlwoiName = "ctiwyqudkjuo"},
+                {parent = frame_031, vwhpwagmlwoiName = "xrxxkmoyzbyy"},
+                {parent = frame_031, vwhpwagmlwoiName = "bwahmpffpvua"},
+                {parent = frame_031, vwhpwagmlwoiName = "cozvosgmdtvc"},
+                {parent = frame_031, vwhpwagmlwoiName = "ntmahmkadkyo"},
+                {parent = frame_031, vwhpwagmlwoiName = "qgwfuqjdkifh"},
+                {parent = frame_031, vwhpwagmlwoiName = "ljighqufeoge"},
+                {parent = frame_031, vwhpwagmlwoiName = "fgchfpifpslf"},
+                {parent = frame_031, vwhpwagmlwoiName = "muymkktbxkcl"},
+                {parent = frame_031, vwhpwagmlwoiName = "wifxtgawvboy"},
+                {parent = frame_031, vwhpwagmlwoiName = "xhahznsnlavw"},
+                {parent = frame_031, vwhpwagmlwoiName = "zjykbxfxgsfs"},
+                {parent = frame_031, vwhpwagmlwoiName = "qtsflviqmvir"},
+                {parent = frame_031, vwhpwagmlwoiName = "zvwawzzyqknd"},
+                {parent = frame_031, vwhpwagmlwoiName = "qiyekvxczdol"},
+                {parent = frame_031, vwhpwagmlwoiName = "oydzurbtzvsp"},
+                {parent = frame_031, vwhpwagmlwoiName = "txcehxkpheli"},
+                {parent = frame_031, vwhpwagmlwoiName = "oqriivzwaodi"},
+                {parent = frame_031, vwhpwagmlwoiName = "epxwtsufasbi"},
+                {parent = frame_031, vwhpwagmlwoiName = "qrivfthrvqgj"},
+                {parent = frame_031, vwhpwagmlwoiName = "mititxycspjp"},
+                {parent = frame_031, vwhpwagmlwoiName = "lkejgakovwhe"},
+                {parent = frame_031, vwhpwagmlwoiName = "zwxqabtibiaz"},
+                {parent = frame_031, vwhpwagmlwoiName = "uooozywnclvp"},
+                {parent = frame_031, vwhpwagmlwoiName = "clttdobauntz"},
+                {parent = frame_031, vwhpwagmlwoiName = "duqgkflagqxj"},
+                {parent = frame_031, vwhpwagmlwoiName = "rffdwwispgna"},
+                {parent = frame_031, vwhpwagmlwoiName = "zcuhlmdbfpvw"},
+                {parent = frame_031, vwhpwagmlwoiName = "vufcxnfzazyy"},
+                {parent = frame_031, vwhpwagmlwoiName = "zrdvgcpnpaxd"},
+                {parent = frame_031, vwhpwagmlwoiName = "oetdrqmymymu"},
+                {parent = frame_031, vwhpwagmlwoiName = "uriwrrwfcwuk"},
+                {parent = frame_031, vwhpwagmlwoiName = "gjipbthtjowq"},
+                {parent = frame_031, vwhpwagmlwoiName = "blisglzpgfir"},
+                {parent = frame_031, vwhpwagmlwoiName = "asgkpuacwmyt"},
+                {parent = frame_031, vwhpwagmlwoiName = "yeasycklakhw"},
+                {parent = frame_031, vwhpwagmlwoiName = "npmvtuetsijj"},
+                {parent = frame_031, vwhpwagmlwoiName = "fppzpstigzxk"},
+                {parent = frame_031, vwhpwagmlwoiName = "xfsuetbfmmrb"},
+                {parent = frame_031, vwhpwagmlwoiName = "horcwrcxeqtx"},
+                {parent = frame_031, vwhpwagmlwoiName = "upjtwprgrlmg"},
+                {parent = frame_031, vwhpwagmlwoiName = "jvqqmfptzgba"},
+                {parent = frame_031, vwhpwagmlwoiName = "twicqcvlsyin"},
+                {parent = frame_031, vwhpwagmlwoiName = "oecpkbrvsxtj"},
+                {parent = frame_031, vwhpwagmlwoiName = "hzzdfjresulh"},
+                {parent = frame_031, vwhpwagmlwoiName = "uchzvcmbylrv"},
+                {parent = frame_031, vwhpwagmlwoiName = "fxraxjbuldqf"},
+                {parent = frame_031, vwhpwagmlwoiName = "gzwhzykpqqdn"},
+                {parent = frame_031, vwhpwagmlwoiName = "hyxuwsnmqogy"},
+                {parent = frame_031, vwhpwagmlwoiName = "cgrmtskeskui"},
+                {parent = frame_031, vwhpwagmlwoiName = "dcnmiupjyugw"},
+                {parent = frame_031, vwhpwagmlwoiName = "byanzitrardm"},
+                {parent = frame_031, vwhpwagmlwoiName = "mhzzlseartht"},
+                {parent = frame_031, vwhpwagmlwoiName = "gbwwcuaybozt"},
+                {parent = frame_031, vwhpwagmlwoiName = "tqanwzdvrhbx"},
+                {parent = frame_031, vwhpwagmlwoiName = "kgxtfsysyywc"},
+                {parent = frame_031, vwhpwagmlwoiName = "lqkplwirewgn"},
+                {parent = frame_031, vwhpwagmlwoiName = "fdptcssapglf"},
+                {parent = frame_031, vwhpwagmlwoiName = "ybdwzwormekn"},
+                {parent = frame_031, vwhpwagmlwoiName = "qwjanwbyqjum"},
+                {parent = frame_031, vwhpwagmlwoiName = "fwhtjmmyyxjc"},
+                {parent = frame_031, vwhpwagmlwoiName = "juujamqrwhqj"},
+                {parent = frame_031, vwhpwagmlwoiName = "aeknzlaeveqz"},
+                {parent = frame_031, vwhpwagmlwoiName = "nrervghognwk"},
+                {parent = frame_031, vwhpwagmlwoiName = "txsgtzamajpg"},
+                {parent = frame_031, vwhpwagmlwoiName = "ghyeyjsnzput"},
+                {parent = frame_031, vwhpwagmlwoiName = "usntjkwjmuab"},
+                {parent = frame_031, vwhpwagmlwoiName = "nxnajqeozwtc"},
+            }
+        ) do
+            local previousVwhpwagmlwoi = lastVwhpwagmlwoi
+            previousVwhpwagmlwoi.Parent = item3.parent
+            local frame_033 = Instance.new("Frame")
+            frame_033.AnchorPoint = Vector2.new(0.5, 0.5)
+            frame_033.BackgroundTransparency = 1
+            frame_033.Name = item3.vwhpwagmlwoiName
+            frame_033.Visible = false
+            frame_033.Size = UDim2.fromOffset(0, 1)
+            frame_033.ZIndex = 2
+            frame_033.BorderSizePixel = 0
+            frame_033.BackgroundColor3 = Color3.fromRGB(150, 152, 175)
+            lastVwhpwagmlwoi = frame_033
+        end
+
+        nxnajqeozwtc.Parent = frame_031
+        -- join us: https://discord.gg/x7YbZeezpm
+        local connection_render_stepped_3 = RunService.RenderStepped:Connect(
+            function(deltaTime4) end
+        )
+
+        local frame_034 = Instance.new("Frame")
+        frame_034.Name = "frame_034"
+        frame_034.Position = UDim2.fromOffset(16, 16)
+        frame_034.ZIndex = 4
+        frame_034.BackgroundTransparency = 1
+        frame_034.Size = UDim2.new(1, -32, 1, -32)
+        frame_034.Parent = frame_029
+        local frame_035 = Instance.new("Frame")
+        frame_035.Name = "frame_035"
+        frame_035.ClipsDescendants = true
+        frame_035.BackgroundColor3 = Color3.fromRGB(12, 12, 15)
+        frame_035.ZIndex = 5
+        frame_035.BorderSizePixel = 0
+        frame_035.Size = UDim2.new(0, num1.side, 1, 0)
+        frame_035.Parent = canvasGroup_003
+        local uICorner_021 = Instance.new("UICorner")
+        uICorner_021.CornerRadius = UDim.new(0, num1.radius)
+        uICorner_021.Parent = frame_035
+        local frame_036 = Instance.new("Frame")
+        frame_036.AnchorPoint = Vector2.new(1, 0)
+        frame_036.Name = "frame_036"
+        frame_036.Position = UDim2.fromScale(1, 0)
+        frame_036.BackgroundColor3 = Color3.fromRGB(12, 12, 15)
+        frame_036.ZIndex = 5
+        frame_036.BorderSizePixel = 0
+        frame_036.Size = UDim2.new(0, num1.radius, 1, 0)
+        frame_036.Parent = frame_035
+        local frame_037 = Instance.new("Frame")
+        frame_037.AnchorPoint = Vector2.new(0.5, 0.5)
+        frame_037.Name = "frame_037"
+        frame_037.Position = UDim2.new(0, num1.side, 0.5, 0)
+        frame_037.ZIndex = 8
+        frame_037.BackgroundTransparency = 1
+        frame_037.Size = UDim2.new(0, 16, 1, 0)
+        frame_037.Parent = canvasGroup_003
+        local frame_038 = Instance.new("Frame")
+        frame_038.Name = "frame_038"
+        frame_038.BackgroundTransparency = 0.9
+        frame_038.BackgroundColor3 = Color3.fromRGB(150, 152, 175)
+        frame_038.ZIndex = 8
+        frame_038.BorderSizePixel = 0
+        frame_038.Size = UDim2.fromScale(1, 1)
+        frame_038.Parent = frame_037
+        local uIGradient_010 = Instance.new("UIGradient")
+        uIGradient_010.Rotation = 0
+        uIGradient_010.Transparency = NumberSequence.new(
+            {
+                NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(0.5, 0.35),
+                NumberSequenceKeypoint.new(1, 1)
+            }
+        )
+        uIGradient_010.Parent = frame_038
+        local frame_039 = Instance.new("Frame")
+        frame_039.AnchorPoint = Vector2.new(0.5, 0.5)
+        frame_039.Name = "frame_039"
+        frame_039.Position = UDim2.fromScale(0.5, 0.5)
+        frame_039.BackgroundColor3 = Color3.fromRGB(52, 52, 64)
+        frame_039.ZIndex = 9
+        frame_039.BorderSizePixel = 0
+        frame_039.Size = UDim2.new(0, 1, 1, 0)
+        frame_039.Parent = frame_037
+        local uIGradient_011 = Instance.new("UIGradient")
+        uIGradient_011.Rotation = 90
+        uIGradient_011.Transparency = NumberSequence.new(
+            {
+                NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(0.12, 0.25),
+                NumberSequenceKeypoint.new(0.88, 0.25), NumberSequenceKeypoint.new(1, 1)
+            }
+        )
+        uIGradient_011.Parent = frame_039
+        local imageLabel_009 = Instance.new("ImageLabel")
+        imageLabel_009.ImageColor3 = Color3.fromRGB(255, 255, 255)
+        imageLabel_009.ScaleType = Enum.ScaleType.Fit
+        imageLabel_009.AnchorPoint = Vector2.new(0.5, 0)
+        imageLabel_009.Image = num1.logo
+        imageLabel_009.Name = "imageLabel_009"
+        imageLabel_009.Position = UDim2.new(0.5, 0, 0, 14)
+        imageLabel_009.BackgroundTransparency = 1
+        imageLabel_009.ZIndex = 7
+        imageLabel_009.BorderSizePixel = 0
+        imageLabel_009.Size = UDim2.fromOffset(117, 117)
+        imageLabel_009.Parent = frame_035
+        local frame_040 = Instance.new("Frame")
+        frame_040.AnchorPoint = Vector2.new(0.5, 0)
+        frame_040.BackgroundTransparency = 0.35
+        frame_040.Name = "frame_040"
+        frame_040.Position = UDim2.new(0.5, 0, 0, 140)
+        frame_040.BackgroundColor3 = Color3.fromRGB(52, 52, 64)
+        frame_040.ZIndex = 7
+        frame_040.BorderSizePixel = 0
+        frame_040.Size = UDim2.new(1, -28, 0, 1)
+        frame_040.Parent = frame_035
+        local uIGradient_012 = Instance.new("UIGradient")
+        uIGradient_012.Rotation = 0
+        uIGradient_012.Transparency = NumberSequence.new(
+            {
+                NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(0.5, 0.2),
+                NumberSequenceKeypoint.new(1, 1)
+            }
+        )
+        uIGradient_012.Parent = frame_040
+        local scrollingFrame_001 = Instance.new("ScrollingFrame")
+        scrollingFrame_001.Active = false
+        scrollingFrame_001.ScrollBarThickness = 0
+        scrollingFrame_001.BackgroundTransparency = 1
+        scrollingFrame_001.Name = "scrollingFrame_001"
+        scrollingFrame_001.Position = UDim2.fromOffset(6, 154)
+        scrollingFrame_001.CanvasSize = UDim2.new()
+        scrollingFrame_001.ZIndex = 7
+        scrollingFrame_001.BorderSizePixel = 0
+        scrollingFrame_001.Size = UDim2.new(1, -12, 1, -222)
+        scrollingFrame_001.Parent = frame_035
+        local uIListLayout_005 = Instance.new("UIListLayout")
+        uIListLayout_005.Padding = UDim.new(0, 3)
+        uIListLayout_005.SortOrder = Enum.SortOrder.LayoutOrder
+        uIListLayout_005.Parent = scrollingFrame_001
+        local changedSignal2 = uIListLayout_005:GetPropertyChangedSignal("AbsoluteContentSize")
+
+        changedSignal2:Connect(
+            function()
+                scrollingFrame_001.CanvasSize = UDim2.fromOffset(0, 2)
+            end
+        )
+
+        local frame_041 = Instance.new("Frame")
+        frame_041.AnchorPoint = Vector2.new(0.5, 1)
+        frame_041.BackgroundTransparency = 0.35
+        frame_041.Name = "frame_041"
+        frame_041.Position = UDim2.new(0.5, 0, 1, -60)
+        frame_041.BackgroundColor3 = Color3.fromRGB(52, 52, 64)
+        frame_041.ZIndex = 7
+        frame_041.BorderSizePixel = 0
+        frame_041.Size = UDim2.new(1, -28, 0, 1)
+        frame_041.Parent = frame_035
+        local uIGradient_013 = Instance.new("UIGradient")
+        uIGradient_013.Rotation = 0
+        uIGradient_013.Transparency = NumberSequence.new(
+            {
+                NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(0.5, 0.2),
+                NumberSequenceKeypoint.new(1, 1)
+            }
+        )
+        uIGradient_013.Parent = frame_041
+        local frame_042 = Instance.new("Frame")
+        frame_042.AnchorPoint = Vector2.new(0.5, 1)
+        frame_042.BackgroundTransparency = 0.25
+        frame_042.Name = "frame_042"
+        frame_042.Position = UDim2.new(0.5, 0, 1, -8)
+        frame_042.BackgroundColor3 = Color3.fromRGB(15, 15, 18)
+        frame_042.ZIndex = 7
+        frame_042.BorderSizePixel = 0
+        frame_042.Size = UDim2.new(1, -12, 0, 44)
+        frame_042.Parent = frame_035
+        local uICorner_022 = Instance.new("UICorner")
+        uICorner_022.CornerRadius = UDim.new(0, 8)
+        uICorner_022.Parent = frame_042
+        local uIStroke_008 = Instance.new("UIStroke")
+        uIStroke_008.Color = Color3.fromRGB(52, 52, 64)
+        uIStroke_008.Transparency = 0.72
+        uIStroke_008.Parent = frame_042
+        local imageLabel_010 = Instance.new("ImageLabel")
+        imageLabel_010.ScaleType = Enum.ScaleType.Crop
+        imageLabel_010.AnchorPoint = Vector2.new(0, 0.5)
+        imageLabel_010.Image = "rbxthumb://type=AvatarHeadShot&id=0&w=150&h=150"
+        imageLabel_010.Name = "imageLabel_010"
+        imageLabel_010.Position = UDim2.new(0, 6, 0.5, 0)
+        imageLabel_010.BackgroundColor3 = Color3.fromRGB(11, 11, 14)
+        imageLabel_010.ZIndex = 8
+        imageLabel_010.BorderSizePixel = 0
+        imageLabel_010.Size = UDim2.fromOffset(32, 32)
+        imageLabel_010.Parent = frame_042
+        local uICorner_023 = Instance.new("UICorner")
+        uICorner_023.CornerRadius = UDim.new(1, 0)
+        uICorner_023.Parent = imageLabel_010
+        local uIStroke_009 = Instance.new("UIStroke")
+        uIStroke_009.Color = Color3.fromRGB(52, 52, 64)
+        uIStroke_009.Transparency = 0.45
+        uIStroke_009.Parent = imageLabel_010
+        local textLabel_009 = Instance.new("TextLabel")
+        textLabel_009.TextColor3 = Color3.fromRGB(240, 240, 245)
+        textLabel_009.Text = Players.LocalPlayer.DisplayName
+        textLabel_009.BackgroundTransparency = 1
+        textLabel_009.TextXAlignment = Enum.TextXAlignment.Left
+        textLabel_009.Font = Enum.Font.GothamBold
+        textLabel_009.Name = "textLabel_009"
+        textLabel_009.Position = UDim2.fromOffset(45, 6)
+        textLabel_009.TextTruncate = Enum.TextTruncate.AtEnd
+        textLabel_009.ZIndex = 8
+        textLabel_009.TextSize = 13
+        textLabel_009.Size = UDim2.new(1, -51, 0, 15)
+        textLabel_009.Parent = frame_042
+        local textLabel_010 = Instance.new("TextLabel")
+        textLabel_010.TextColor3 = Color3.fromRGB(122, 122, 134)
+        textLabel_010.TextTransparency = 0.3
+        textLabel_010.Text = "@" .. Players.LocalPlayer.Name
+        textLabel_010.BackgroundTransparency = 1
+        textLabel_010.TextXAlignment = Enum.TextXAlignment.Left
+        textLabel_010.Font = Enum.Font.GothamBold
+        textLabel_010.Name = "textLabel_010"
+        textLabel_010.Position = UDim2.fromOffset(45, 22)
+        textLabel_010.TextTruncate = Enum.TextTruncate.AtEnd
+        textLabel_010.ZIndex = 8
+        textLabel_010.TextSize = 11
+        textLabel_010.Size = UDim2.new(1, -51, 0, 13)
+        textLabel_010.Parent = frame_042
+        local changedSignal3 = Players.LocalPlayer:GetPropertyChangedSignal("DisplayName")
+
+        changedSignal3:Connect(
+            function()
+                textLabel_009.Text = Players.LocalPlayer.DisplayName
+            end
+        )
+
+        frame_028.InputBegan:Connect(function(input24, gameProcessed24) end)
+
+        UserInputService.InputEnded:Connect(function(input25, gameProcessed25) end)
+
+        UserInputService.InputChanged:Connect(function(input26, gameProcessed26) end)
+
+        UserInputService.InputBegan:Connect(function(input27, gameProcessed27) end)
+        -- ＳＬ // discord.gg/x7YbZeezpm
+        frame_029.MouseEnter:Connect(function() end)
+
+        frame_029.MouseLeave:Connect(function() end)
+
+        task.defer(
+            function()
+                sound_002.PlaybackSpeed = 0.8
+                sound_002.Volume = 0.42
+                sound_002.TimePosition = 0
+                sound_002:Play()
+                frame_025.Visible = true
+                connection_render_stepped_4:Disconnect()
+
+                RunService.RenderStepped:Connect(function(deltaTime6) end)
+            end,
+            {
+                bind = Enum.KeyCode[num1.bind], body = frame_029, list = {},
+                net = {
+                    conn = connection_render_stepped_3, layer = frame_031, marks = {frame_037},
+                    on = true, veil = 0, mark = function() end
+                }, open = true, pages = frame_034, root = canvasGroup_003, shell = frame_025,
+                side = frame_035, size = num1.size, tabs = scrollingFrame_001,
+                mark = function() end,
+                render = function()
+                    sound_002.PlaybackSpeed = 0.8
+                    sound_002.Volume = 0.42
+                    sound_002.TimePosition = 0
+                    sound_002:Play()
+                    frame_025.Visible = true
+                    connection_render_stepped_4:Disconnect()
+
+                    RunService.RenderStepped:Connect(function(deltaTime6) end)
+                end, setbind = function() end, setfury = function() end,
+                setlogo = function(_, param4)
+                    imageLabel_009.Image = tostring(param4)
+                end,
+                setsize = function(_, param5)
+                    local tween = TweenService:Create(
+                        frame_025, TweenInfo.new(0.18), {Size = param5}
+                    )
+                    tween:Play()
+                end,
+                tab = function(_, param6)
+                    local frame_043 = Instance.new("Frame")
+                    frame_043.LayoutOrder = 1
+                    frame_043.Name = "frame_043"
+                    frame_043.BackgroundTransparency = 1
+                    frame_043.ZIndex = 7
+                    frame_043.AutomaticSize = Enum.AutomaticSize.Y
+                    frame_043.Size = UDim2.new(1, 0, 0, 0)
+                    frame_043.Parent = scrollingFrame_001
+                    local uIListLayout_006 = Instance.new("UIListLayout")
+                    uIListLayout_006.Padding = UDim.new(0, 2)
+                    uIListLayout_006.SortOrder = Enum.SortOrder.LayoutOrder
+                    uIListLayout_006.Parent = frame_043
+                    local frame_044 = Instance.new("Frame")
+                    frame_044.LayoutOrder = 1
+                    frame_044.Name = "frame_044"
+                    frame_044.BackgroundTransparency = 0.06
+                    frame_044.BackgroundColor3 = Color3.fromRGB(12, 12, 15)
+                    frame_044.ZIndex = 7
+                    frame_044.BorderSizePixel = 0
+                    frame_044.Size = UDim2.new(1, 0, 0, 40)
+                    frame_044.Parent = frame_043
+                    local uICorner_024 = Instance.new("UICorner")
+                    uICorner_024.CornerRadius = UDim.new(0, 6)
+                    uICorner_024.Parent = frame_044
+                    local uIStroke_010 = Instance.new("UIStroke")
+                    uIStroke_010.Color = Color3.fromRGB(52, 52, 64)
+                    uIStroke_010.Transparency = 1
+                    uIStroke_010.Parent = frame_044
+                    local frame_045 = Instance.new("Frame")
+                    frame_045.Name = "frame_045"
+                    frame_045.BackgroundTransparency = 1
+                    frame_045.BackgroundColor3 = Color3.fromRGB(11, 11, 14)
+                    frame_045.ZIndex = 7
+                    frame_045.BorderSizePixel = 0
+                    frame_045.Size = UDim2.fromScale(1, 1)
+                    frame_045.Parent = frame_044
+                    local uICorner_025 = Instance.new("UICorner")
+                    uICorner_025.CornerRadius = UDim.new(0, 6)
+                    uICorner_025.Parent = frame_045
+                    local uIGradient_014 = Instance.new("UIGradient")
+                    uIGradient_014.Rotation = 0
+                    uIGradient_014.Transparency = NumberSequence.new(
+                        {
+                            NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(0.7, 0.25),
+                            NumberSequenceKeypoint.new(1, 0.55)
+                        }
+                    )
+                    uIGradient_014.Parent = frame_045
+                    local frame_046 = Instance.new("Frame")
+                    frame_046.AnchorPoint = Vector2.new(0, 0.5)
+                    frame_046.BackgroundTransparency = 1
+                    frame_046.Name = "frame_046"
+                    frame_046.Position = UDim2.new(0, 1, 0.5, 0)
+                    frame_046.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                    frame_046.ZIndex = 8
+                    frame_046.BorderSizePixel = 0
+                    frame_046.Size = UDim2.new(0, 3, 0, 0)
+                    frame_046.Parent = frame_044
+                    local uICorner_026 = Instance.new("UICorner")
+                    uICorner_026.CornerRadius = UDim.new(1, 0)
+                    uICorner_026.Parent = frame_046
+                    local imageLabel_011 = Instance.new("ImageLabel")
+                    imageLabel_011.ImageColor3 = Color3.fromRGB(122, 122, 134)
+                    imageLabel_011.ImageTransparency = 0.35
+                    imageLabel_011.AnchorPoint = Vector2.new(0, 0.5)
+                    imageLabel_011.Image = ""
+                    imageLabel_011.Name = "imageLabel_011"
+                    imageLabel_011.Position = UDim2.new(0, 8, 0.5, 0)
+                    imageLabel_011.ZIndex = 8
+                    imageLabel_011.BackgroundTransparency = 1
+                    imageLabel_011.Size = UDim2.fromOffset(16, 16)
+                    imageLabel_011.Parent = frame_044
+                    local textLabel_011 = Instance.new("TextLabel")
+                    textLabel_011.TextColor3 = Color3.fromRGB(122, 122, 134)
+                    textLabel_011.TextTransparency = 0.4
+                    textLabel_011.Text = param6.name
+                    textLabel_011.BackgroundTransparency = 1
+                    textLabel_011.TextXAlignment = Enum.TextXAlignment.Left
+                    textLabel_011.Font = Enum.Font.GothamBold
+                    textLabel_011.Name = "textLabel_011"
+                    textLabel_011.Position = UDim2.new(0, 31, 0, 5)
+                    textLabel_011.TextTruncate = Enum.TextTruncate.AtEnd
+                    textLabel_011.ZIndex = 8
+                    textLabel_011.TextSize = 13
+                    textLabel_011.Size = UDim2.new(1, -39, 0, 16)
+                    textLabel_011.Parent = frame_044
+                    local textLabel_012 = Instance.new("TextLabel")
+                    textLabel_012.TextColor3 = Color3.fromRGB(122, 122, 134)
+                    textLabel_012.TextTransparency = 0.7
+                    textLabel_012.Text = param6.tip
+                    textLabel_012.BackgroundTransparency = 1
+                    textLabel_012.TextXAlignment = Enum.TextXAlignment.Left
+                    textLabel_012.Font = Enum.Font.GothamBold
+                    textLabel_012.Name = "textLabel_012"
+                    textLabel_012.Position = UDim2.new(0, 31, 0, 21)
+                    textLabel_012.TextTruncate = Enum.TextTruncate.AtEnd
+                    textLabel_012.ZIndex = 8
+                    textLabel_012.TextSize = 9
+                    textLabel_012.Size = UDim2.new(1, -39, 0, 11)
+                    textLabel_012.Parent = frame_044
+                    local imageButton_008 = Instance.new("ImageButton")
+                    imageButton_008.AutoButtonColor = false
+                    imageButton_008.Selectable = false
+                    imageButton_008.Name = "imageButton_008"
+                    imageButton_008.ImageTransparency = 1
+                    imageButton_008.ZIndex = 9
+                    imageButton_008.BackgroundTransparency = 1
+                    imageButton_008.Size = UDim2.fromScale(1, 1)
+                    imageButton_008.Parent = frame_044
+
+                    frame_044.MouseEnter:Connect(function() end)
+
+                    frame_044.MouseLeave:Connect(function() end)
+                    -- https://discord.gg/x7YbZeezpm | SOURCE LEAK
+                    local imageLabel_012 = Instance.new("ImageLabel")
+                    imageLabel_012.ImageColor3 = Color3.fromRGB(122, 122, 134)
+                    imageLabel_012.ImageTransparency = 1
+                    imageLabel_012.Rotation = 0
+                    imageLabel_012.AnchorPoint = Vector2.new(1, 0.5)
+                    imageLabel_012.Image = "rbxassetid://71457658246709"
+                    imageLabel_012.Name = "imageLabel_012"
+                    imageLabel_012.Position = UDim2.new(1, -7, 0.5, 0)
+                    imageLabel_012.Visible = false
+                    imageLabel_012.ZIndex = 8
+                    imageLabel_012.BackgroundTransparency = 1
+                    imageLabel_012.Size = UDim2.fromOffset(13, 13)
+                    imageLabel_012.Parent = frame_044
+                    local frame_047 = Instance.new("Frame")
+                    frame_047.LayoutOrder = 2
+                    frame_047.Name = "frame_047"
+                    frame_047.ClipsDescendants = true
+                    frame_047.BackgroundTransparency = 1
+                    frame_047.ZIndex = 7
+                    frame_047.BorderSizePixel = 0
+                    frame_047.Size = UDim2.new(1, 0, 0, 0)
+                    frame_047.Parent = frame_043
+                    local uIListLayout_007 = Instance.new("UIListLayout")
+                    uIListLayout_007.Padding = UDim.new(0, 2)
+                    uIListLayout_007.SortOrder = Enum.SortOrder.LayoutOrder
+                    uIListLayout_007.Parent = frame_047
+                    local frame_048 = Instance.new("Frame")
+                    frame_048.Visible = false
+                    frame_048.Name = "frame_048"
+                    frame_048.ZIndex = 4
+                    frame_048.BackgroundTransparency = 1
+                    frame_048.Size = UDim2.fromScale(1, 1)
+                    frame_048.Parent = frame_034
+
+                    for _, item4 in ipairs(
+                        {
+                            {jhkzgmjhomrcName = "scrollingFrame_002", xScale = 0, xOffset = 0},
+                            {jhkzgmjhomrcName = "zajnfbzxnkzb", xScale = 0.5, xOffset = 4},
+                        }
+                    ) do
+                        local scrollingFrame_002 = Instance.new("ScrollingFrame")
+                        scrollingFrame_002.ZIndex = 5
+                        scrollingFrame_002.BackgroundTransparency = 1
+                        scrollingFrame_002.Name = item4.jhkzgmjhomrcName
+                        scrollingFrame_002.Position = UDim2.new(item4.xScale, item4.xOffset, 0, 34)
+                        scrollingFrame_002.CanvasSize = UDim2.new()
+                        scrollingFrame_002.ScrollBarThickness = 0
+                        scrollingFrame_002.BorderSizePixel = 0
+                        scrollingFrame_002.Size = UDim2.new(0.5, -4, 1, -34)
+                        scrollingFrame_002.Parent = frame_048
+                        local uIListLayout_008 = Instance.new("UIListLayout")
+                        uIListLayout_008.Padding = UDim.new(0, 9)
+                        uIListLayout_008.SortOrder = Enum.SortOrder.LayoutOrder
+                        uIListLayout_008.Parent = scrollingFrame_002
+                        local changedSignal4 = uIListLayout_008:GetPropertyChangedSignal(
+                            "AbsoluteContentSize"
+                        )
+
+                        changedSignal4:Connect(
+                            function()
+                                scrollingFrame_002.CanvasSize = UDim2.fromOffset(0, 4)
+                            end
+                        )
+                    end
+
+                    local frame_049 = Instance.new("Frame")
+                    frame_049.Name = "frame_049"
+                    frame_049.Position = UDim2.fromOffset(-16, -16)
+                    frame_049.BackgroundColor3 = Color3.fromRGB(6, 6, 8)
+                    frame_049.ZIndex = 6
+                    frame_049.BorderSizePixel = 0
+                    frame_049.Size = UDim2.new(1, 32, 0, 42)
+                    frame_049.Parent = frame_048
+                    local frame_050 = Instance.new("Frame")
+                    frame_050.AnchorPoint = Vector2.new(0, 0.5)
+                    frame_050.Name = "frame_050"
+                    frame_050.Position = UDim2.new(0, 0, 1, 0)
+                    frame_050.ZIndex = 6
+                    frame_050.BackgroundTransparency = 1
+                    frame_050.Size = UDim2.new(1, 0, 0, 16)
+                    frame_050.Parent = frame_049
+                    local frame_051 = Instance.new("Frame")
+                    frame_051.Name = "frame_051"
+                    frame_051.BackgroundTransparency = 0.9
+                    frame_051.BackgroundColor3 = Color3.fromRGB(150, 152, 175)
+                    frame_051.ZIndex = 6
+                    frame_051.BorderSizePixel = 0
+                    frame_051.Size = UDim2.fromScale(1, 1)
+                    frame_051.Parent = frame_050
+                    local uIGradient_015 = Instance.new("UIGradient")
+                    uIGradient_015.Rotation = 90
+                    uIGradient_015.Transparency = NumberSequence.new(
+                        {
+                            NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(0.5, 0.35),
+                            NumberSequenceKeypoint.new(1, 1)
+                        }
+                    )
+                    uIGradient_015.Parent = frame_051
+                    local frame_052 = Instance.new("Frame")
+                    frame_052.AnchorPoint = Vector2.new(0.5, 0.5)
+                    frame_052.Name = "frame_052"
+                    frame_052.Position = UDim2.fromScale(0.5, 0.5)
+                    frame_052.BackgroundColor3 = Color3.fromRGB(52, 52, 64)
+                    frame_052.ZIndex = 7
+                    frame_052.BorderSizePixel = 0
+                    frame_052.Size = UDim2.new(1, 0, 0, 1)
+                    frame_052.Parent = frame_050
+                    local uIGradient_016 = Instance.new("UIGradient")
+                    uIGradient_016.Rotation = 0
+                    uIGradient_016.Transparency = NumberSequence.new(
+                        {
+                            NumberSequenceKeypoint.new(0, 1),
+                            NumberSequenceKeypoint.new(0.12, 0.25),
+                            NumberSequenceKeypoint.new(0.88, 0.25), NumberSequenceKeypoint.new(1, 1)
+                        }
+                    )
+                    uIGradient_016.Parent = frame_052
+                    local textLabel_013 = Instance.new("TextLabel")
+                    textLabel_013.TextColor3 = Color3.fromRGB(122, 122, 134)
+                    textLabel_013.TextTransparency = 1
+                    textLabel_013.Text = ""
+                    textLabel_013.BackgroundTransparency = 1
+                    textLabel_013.TextXAlignment = Enum.TextXAlignment.Left
+                    textLabel_013.Font = Enum.Font.GothamBold
+                    textLabel_013.Name = "textLabel_013"
+                    textLabel_013.Position = UDim2.fromOffset(17, 3)
+                    textLabel_013.TextTruncate = Enum.TextTruncate.AtEnd
+                    textLabel_013.ZIndex = 7
+                    textLabel_013.TextSize = 14
+                    textLabel_013.Size = UDim2.new(1, -110, 1, -8)
+                    textLabel_013.Parent = frame_049
+                    local textBox_003 = Instance.new("TextBox")
+                    textBox_003.Visible = false
+                    textBox_003.TextTransparency = 1
+                    textBox_003.AnchorPoint = Vector2.new(1, 0.5)
+                    textBox_003.PlaceholderColor3 = Color3.fromRGB(122, 122, 134)
+                    textBox_003.PlaceholderText = "search"
+                    textBox_003.BorderSizePixel = 0
+                    textBox_003.Size = UDim2.new(0, 0, 0, 27)
+                    textBox_003.ClipsDescendants = true
+                    textBox_003.Text = ""
+                    textBox_003.ZIndex = 7
+                    textBox_003.TextXAlignment = Enum.TextXAlignment.Left
+                    textBox_003.Font = Enum.Font.GothamBold
+                    textBox_003.Name = "textBox_003"
+                    textBox_003.Position = UDim2.new(1, -44, 0.5, -1)
+                    textBox_003.TextSize = 14
+                    textBox_003.ClearTextOnFocus = false
+                    textBox_003.TextColor3 = Color3.fromRGB(240, 240, 245)
+                    textBox_003.BackgroundColor3 = Color3.fromRGB(15, 15, 18)
+                    textBox_003.Parent = frame_049
+                    local uICorner_027 = Instance.new("UICorner")
+                    uICorner_027.CornerRadius = UDim.new(0, 8)
+                    uICorner_027.Parent = textBox_003
+                    local uIPadding_006 = Instance.new("UIPadding")
+                    uIPadding_006.PaddingLeft = UDim.new(0, 12)
+                    uIPadding_006.PaddingRight = UDim.new(0, 12)
+                    uIPadding_006.Parent = textBox_003
+                    local uIStroke_011 = Instance.new("UIStroke")
+                    uIStroke_011.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+                    uIStroke_011.Transparency = 0.55
+                    uIStroke_011.Color = Color3.fromRGB(52, 52, 64)
+                    uIStroke_011.Parent = textBox_003
+                    local frame_053 = Instance.new("Frame")
+                    frame_053.AnchorPoint = Vector2.new(0.5, 1)
+                    frame_053.BackgroundTransparency = 1
+                    frame_053.Name = "frame_053"
+                    frame_053.Position = UDim2.fromScale(0.5, 1)
+                    frame_053.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                    frame_053.ZIndex = 8
+                    frame_053.BorderSizePixel = 0
+                    frame_053.Size = UDim2.new(1, 6, 0, 1)
+                    frame_053.Parent = textBox_003
+                    local uIGradient_017 = Instance.new("UIGradient")
+                    uIGradient_017.Rotation = 0
+                    uIGradient_017.Transparency = NumberSequence.new(
+                        {
+                            NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(0.5, 0),
+                            NumberSequenceKeypoint.new(1, 1)
+                        }
+                    )
+                    uIGradient_017.Parent = frame_053
+                    local imageButton_009 = Instance.new("ImageButton")
+                    imageButton_009.AutoButtonColor = false
+                    imageButton_009.Selectable = false
+                    imageButton_009.ImageColor3 = Color3.fromRGB(122, 122, 134)
+                    imageButton_009.ScaleType = Enum.ScaleType.Fit
+                    imageButton_009.ImageTransparency = 0.2
+                    imageButton_009.BackgroundTransparency = 1
+                    imageButton_009.AnchorPoint = Vector2.new(1, 0.5)
+                    imageButton_009.Image = "rbxassetid://72296609649861"
+                    imageButton_009.Name = "imageButton_009"
+                    imageButton_009.Position = UDim2.new(1, -17, 0.5, 2)
+                    imageButton_009.BackgroundColor3 = Color3.fromRGB(15, 15, 18)
+                    imageButton_009.ZIndex = 8
+                    imageButton_009.BorderSizePixel = 0
+                    imageButton_009.Size = UDim2.fromOffset(22, 22)
+                    imageButton_009.Parent = frame_049
+                    local uICorner_028 = Instance.new("UICorner")
+                    uICorner_028.CornerRadius = UDim.new(0, 6)
+                    uICorner_028.Parent = imageButton_009
+
+                    imageButton_009.MouseButton1Click:Connect(
+                        function()
+                            textBox_003.Visible = true
+                            imageButton_009.Image = "rbxassetid://116396312853810"
+                            local tween18 = TweenService:Create(
+                                textBox_003,
+                                TweenInfo.new(
+                                    0.24, Enum.EasingStyle.Quart, Enum.EasingDirection.Out
+                                ), {Size = UDim2.new(0.66, -44, 0, 27), TextTransparency = 0}
+                            )
+                            tween18:Play()
+                            local tween19 = TweenService:Create(
+                                uIStroke_011,
+                                TweenInfo.new(
+                                    0.24, Enum.EasingStyle.Quart, Enum.EasingDirection.Out
+                                ), {Transparency = 0.35}
+                            )
+                            tween19:Play()
+                            local tween20 = TweenService:Create(
+                                frame_053,
+                                TweenInfo.new(
+                                    0.24, Enum.EasingStyle.Quart, Enum.EasingDirection.Out
+                                ), {BackgroundTransparency = 0.35}
+                            )
+                            tween20:Play()
+                            local tween21 = TweenService:Create(
+                                imageButton_009,
+                                TweenInfo.new(
+                                    0.24, Enum.EasingStyle.Quart, Enum.EasingDirection.Out
+                                ),
+                                {BackgroundTransparency = 0.45, ImageColor3 = Color3.fromRGB(
+                                    240, 240, 245
+                                ), ImageTransparency = 0}
+                            )
+                            tween21:Play()
+
+                            task.delay(0.12, function() end)
+                        end
+                    )
+
+                    imageButton_009.MouseEnter:Connect(
+                        function()
+                            local tween22 = TweenService:Create(
+                                imageButton_009,
+                                TweenInfo.new(
+                                    0.24, Enum.EasingStyle.Quart, Enum.EasingDirection.Out
+                                ),
+                                {BackgroundTransparency = 0.45, ImageColor3 = Color3.fromRGB(
+                                    240, 240, 245
+                                ), ImageTransparency = 0}
+                            )
+                            tween22:Play()
+                        end
+                    )
+
+                    imageButton_009.MouseLeave:Connect(function() end)
+
+                    local changedSignal6 = textBox_003:GetPropertyChangedSignal("Text")
+
+                    changedSignal6:Connect(
+                        function()
+                            textLabel_013.Text = ""
+                            local tween23 = TweenService:Create(
+                                textLabel_013,
+                                TweenInfo.new(
+                                    0.24, Enum.EasingStyle.Quart, Enum.EasingDirection.Out
+                                ), {TextTransparency = 1}
+                            )
+                            tween23:Play()
+                        end
+                    )
+
+                    textBox_003.FocusLost:Connect(
+                        function(enterPressed2, inputObject2)
+                            imageButton_009.Image = "rbxassetid://72296609649861"
+                            textBox_003:ReleaseFocus()
+                            local tween24 = TweenService:Create(
+                                textBox_003,
+                                TweenInfo.new(
+                                    0.24, Enum.EasingStyle.Quart, Enum.EasingDirection.Out
+                                ), {Size = UDim2.new(0, 0, 0, 27), TextTransparency = 1}
+                            )
+                            tween24:Play()
+                            local tween25 = TweenService:Create(
+                                uIStroke_011,
+                                TweenInfo.new(
+                                    0.24, Enum.EasingStyle.Quart, Enum.EasingDirection.Out
+                                ), {Transparency = 0.55}
+                            )
+                            tween25:Play()
+                            local tween26 = TweenService:Create(
+                                frame_053,
+                                TweenInfo.new(
+                                    0.24, Enum.EasingStyle.Quart, Enum.EasingDirection.Out
+                                ), {BackgroundTransparency = 1}
+                            )
+                            tween26:Play()
+                            local tween27 = TweenService:Create(
+                                imageButton_009,
+                                TweenInfo.new(
+                                    0.24, Enum.EasingStyle.Quart, Enum.EasingDirection.Out
+                                ),
+                                {BackgroundTransparency = 1, ImageColor3 = Color3.fromRGB(
+                                    122, 122, 134
+                                ), ImageTransparency = 0.2}
+                            )
+                            tween27:Play()
+
+                            task.delay(0.28, function() end)
+                        end
+                    )
+
+                    local changedSignal7 = uIListLayout_007:GetPropertyChangedSignal(
+                        "AbsoluteContentSize"
+                    )
+
+                    changedSignal7:Connect(function() end)
+
+                    imageButton_008.MouseButton1Click:Connect(function() end)
+
+                    local tween2 = TweenService:Create(
+                        frame_045,
+                        TweenInfo.new(0.24, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+                        {BackgroundTransparency = 0.12}
+                    )
+                    tween2:Play()
+                    local tween3 = TweenService:Create(
+                        uIStroke_010,
+                        TweenInfo.new(0.24, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+                        {Transparency = 0.72}
+                    )
+                    tween3:Play()
+                    local tween4 = TweenService:Create(
+                        frame_046,
+                        TweenInfo.new(0.24, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+                        {BackgroundTransparency = 0.05, Size = UDim2.new(0, 3, 0, 22)}
+                    )
+                    tween4:Play()
+                    local tween5 = TweenService:Create(
+                        imageLabel_011,
+                        TweenInfo.new(0.24, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+                        {ImageColor3 = Color3.fromRGB(240, 240, 245), ImageTransparency = 0}
+                    )
+                    tween5:Play()
+                    local tween6 = TweenService:Create(
+                        textLabel_011,
+                        TweenInfo.new(0.24, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+                        {TextColor3 = Color3.fromRGB(240, 240, 245), TextTransparency = 0}
+                    )
+                    tween6:Play()
+                    local tween7 = TweenService:Create(
+                        textLabel_012,
+                        TweenInfo.new(0.24, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+                        {TextTransparency = 0.4}
+                    )
+                    tween7:Play()
+                    frame_048.Visible = true
+                end,
+                toggle = function()
+                    sound_001.PlaybackSpeed = 1.32
+                    sound_001.Volume = 0.3
+                    sound_001.TimePosition = 0
+                    sound_001:Play()
+
+                    local connection_render_stepped_4 = RunService.RenderStepped:Connect(
+                        function(deltaTime5) end
+                    )
+                end
+            }, true
+        )
+    end
+}
